@@ -15,12 +15,13 @@ import javax.swing.ImageIcon;
  *
  * @author Oficina
  */
-public class VentanaOftasDsctos extends javax.swing.JFrame {
+public class DialogOftasDsctos extends javax.swing.JDialog {
 
     /**
      * Creates new form VentanaSerCliente
      */
-    public VentanaOftasDsctos() {
+    public DialogOftasDsctos(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         
         //Icono del frame

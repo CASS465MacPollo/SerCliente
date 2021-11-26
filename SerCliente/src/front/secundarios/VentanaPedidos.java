@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
@@ -24,9 +25,8 @@ public class VentanaPedidos extends javax.swing.JFrame {
 
     private VentanaPrincipalMostrador vPrincipal;
     private VentanaAlmacenes vAlmacenes;
-    private VentanaNit vNit;
-    private VentanaOftasDsctos vOftasDsctos;
-    private VentanaDetPedido vDetPedido;
+    private DialogOftasDsctos dOftasDsctos;
+    private DialogDetPedido dDetPedido;
     
     /**
      * Creates new form VentanaSerCliente
@@ -36,9 +36,8 @@ public class VentanaPedidos extends javax.swing.JFrame {
         
         this.vPrincipal = vPrincipal;
         this.vAlmacenes = vAlmacenes;
-        vNit = new VentanaNit();
-        vOftasDsctos = new VentanaOftasDsctos();
-        vDetPedido = new VentanaDetPedido();
+        dOftasDsctos = new DialogOftasDsctos(this, true);
+        dDetPedido = new DialogDetPedido(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -976,7 +975,7 @@ public class VentanaPedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField89ActionPerformed
 
     private void jTextField90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField90ActionPerformed
-        abrirVentanaSecundaria(vOftasDsctos);
+        abrirDialog(dOftasDsctos);
     }//GEN-LAST:event_jTextField90ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
@@ -990,12 +989,12 @@ public class VentanaPedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        abrirVentanaSecundaria(vOftasDsctos);
+        abrirDialog(dOftasDsctos);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirVentanaSecundaria(vDetPedido);
+            abrirDialog(dDetPedido);
         }
     }//GEN-LAST:event_jTable3MouseClicked
     
@@ -1018,6 +1017,14 @@ public class VentanaPedidos extends javax.swing.JFrame {
             ventana.toFront();
         } else {
             ventana.setVisible(true);
+        }
+    }
+    
+    private void abrirDialog(JDialog modal) {
+        if (modal.isShowing()) {
+            modal.toFront();
+        } else {
+            modal.setVisible(true);
         }
     }
     

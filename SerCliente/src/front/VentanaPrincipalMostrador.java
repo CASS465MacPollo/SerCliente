@@ -7,8 +7,11 @@ package front;
 
 import com.sun.glass.events.KeyEvent;
 import front.secundarios.DialogCupoEmpleado;
-import front.secundarios.VentanaNit;
-import front.secundarios.VentanaOftasDsctos;
+import front.secundarios.DialogDetPedido;
+import front.secundarios.DialogRetomarGestion;
+import front.secundarios.DialogNit;
+import front.secundarios.DialogOftasDsctos;
+import front.secundarios.DialogProcedimiento;
 import front.secundarios.VentanaRetomarGestion;
 import front.secundarios.VentanaSerCliente;
 import java.awt.Component;
@@ -34,10 +37,13 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     private Dimension dimension;
     private VentanaAlmacenes vAlmacenes;
     private VentanaRetomarGestion vRetomarGestion;
-    private VentanaNit vNit;
+    private DialogNit dNit;
     private VentanaSerCliente vSerCliente;
-    private VentanaOftasDsctos vOftasDsctos;
+    private DialogOftasDsctos dOftasDsctos;
     private DialogCupoEmpleado dCupoEmpleado;
+    private DialogRetomarGestion dRetomarGestion;
+    private DialogProcedimiento dProcedimiento;
+    private DialogDetPedido dDetPedido;
 
     /**
      * Creates new form VentanaMenu
@@ -47,10 +53,13 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         vAlmacenes = new VentanaAlmacenes();
         vRetomarGestion = new VentanaRetomarGestion(this, vAlmacenes);
-        vNit = new VentanaNit();
+        dNit = new DialogNit(this, true);
         vSerCliente = new VentanaSerCliente(this, vAlmacenes);
-        vOftasDsctos = new VentanaOftasDsctos();
+        dOftasDsctos = new DialogOftasDsctos(this, true);
         dCupoEmpleado = new DialogCupoEmpleado(this, true);
+        dRetomarGestion = new DialogRetomarGestion(this, true, vAlmacenes);
+        dProcedimiento = new DialogProcedimiento(this, true);
+        dDetPedido = new DialogDetPedido(this, true);
 
         ajustarComponentes();
     }
@@ -1516,7 +1525,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         clientesTMPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         fechaCampaniaPanel1.setBackground(new java.awt.Color(245, 245, 245));
-        fechaCampaniaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Campaña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        fechaCampaniaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Campaña", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         fechaCampaniaTxt.setEditable(false);
         fechaCampaniaTxt.setBackground(new java.awt.Color(255, 255, 153));
@@ -1541,7 +1550,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         tipoMarcacionPanel1.setBackground(new java.awt.Color(245, 245, 245));
-        tipoMarcacionPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Marcación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        tipoMarcacionPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Marcación", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         tipoMarcacionTxt1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         tipoMarcacionTxt1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1663,7 +1672,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         });
 
         jPanel28.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Usuario", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jLabel5.setText("Pedidos Realizados");
@@ -1711,7 +1720,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel67.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consolidado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consolidado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTextField15.setBackground(new java.awt.Color(255, 255, 153));
         jTextField15.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
@@ -1759,7 +1768,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel69.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Llamar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Llamar", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jLabel29.setText("Por Usuario");
@@ -1901,7 +1910,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         callInPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel71.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton36.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton36.setText("WhatsApp");
@@ -1929,7 +1938,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel73.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel73.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel73.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton38.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton38.setText("Domicilio Mostrador");
@@ -1973,7 +1982,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel74.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel74.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel74.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton68.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton68.setText("Buscar Cliente");
@@ -2013,7 +2022,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel75.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel75.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel75.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel125.setText("Nombre");
 
@@ -2086,7 +2095,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel76.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel76.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel76.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel131.setText("Almacén");
 
@@ -2244,7 +2253,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel77.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel77.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel77.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable14.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2591,7 +2600,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         callInPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel78.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel78.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel78.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton41.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton41.setText("Llamada Entrante");
@@ -2619,7 +2628,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel79.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel79.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel79.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton42.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton42.setText("Domicilio Mostrador");
@@ -2647,7 +2656,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel80.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel80.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel80.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton80.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton80.setText("Buscar Cliente");
@@ -2677,7 +2686,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel83.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel83.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel83.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel160.setText("Nombre");
 
@@ -2750,7 +2759,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel88.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel88.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel88.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable15.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2850,12 +2859,27 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton87.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton87.setText("Pedidos Trasmitidos");
+        jButton87.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton87ActionPerformed(evt);
+            }
+        });
 
         jButton88.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton88.setText("Ofertas y Descuentos");
+        jButton88.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton88ActionPerformed(evt);
+            }
+        });
 
         jButton89.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton89.setText("Pedidos Virtuales");
+        jButton89.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton89ActionPerformed(evt);
+            }
+        });
 
         jCheckBox12.setBackground(new java.awt.Color(245, 245, 245));
         jCheckBox12.setForeground(new java.awt.Color(255, 51, 51));
@@ -3015,7 +3039,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel87.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel87.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel87.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel137.setText("Almacén");
 
@@ -3238,7 +3262,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel47.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -3262,7 +3286,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel48.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton21.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton21.setText("Todos");
@@ -3297,7 +3321,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel49.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton23.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton23.setText("Todos");
@@ -3336,15 +3360,35 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton29.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton29.setText("Zonas");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
 
         jButton31.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton31.setText("Marcación");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
 
         jButton32.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton32.setText("Campañas");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
 
         jButton33.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton33.setText("Eliminar C");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
 
         jTabbedPane3.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -3567,7 +3611,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel53.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel54.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -3591,7 +3635,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel55.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton25.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton25.setText("Todos");
@@ -3626,7 +3670,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel56.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton27.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton27.setText("Todos");
@@ -3665,9 +3709,19 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton36.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton36.setText("Zonas");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
 
         jButton37.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton37.setText("Marcación");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
 
         jTabbedPane4.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -3939,7 +3993,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel90.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel91.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel91.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel91.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
         jPanel91.setLayout(jPanel91Layout);
@@ -3963,9 +4017,19 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton91.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton91.setText("Zonas");
+        jButton91.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton91ActionPerformed(evt);
+            }
+        });
 
         jButton92.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton92.setText("Marcación");
+        jButton92.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton92ActionPerformed(evt);
+            }
+        });
 
         jLabel184.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel184.setText("Gestión Por Hora");
@@ -4067,7 +4131,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel92.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel93.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel93.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel93.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jLabel186.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel186.setText("Fecha de Campaña");
@@ -4093,7 +4157,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel94.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel94.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel94.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton44.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton44.setText("Histórico");
@@ -4128,7 +4192,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel95.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel95.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campaña(s)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel95.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campaña(s)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton48.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton48.setText("Todos");
@@ -4206,7 +4270,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jButton96.setText("Ejecutar");
 
         jPanel96.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel96.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Punto(s) de Venta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel96.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Punto(s) de Venta", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton50.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton50.setText("Todos");
@@ -4343,15 +4407,35 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton101.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton101.setText("Zonas");
+        jButton101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton101ActionPerformed(evt);
+            }
+        });
 
         jButton102.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton102.setText("Marcación");
+        jButton102.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton102ActionPerformed(evt);
+            }
+        });
 
         jButton103.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton103.setText("Campañas");
+        jButton103.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton103ActionPerformed(evt);
+            }
+        });
 
         jButton104.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton104.setText("Eliminar C");
+        jButton104.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton104ActionPerformed(evt);
+            }
+        });
 
         jLabel189.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel189.setText("Informe Guacamaya");
@@ -4555,7 +4639,20 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable24MouseClicked(evt);
+            }
+        });
         jScrollPane30.setViewportView(jTable24);
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
@@ -4604,7 +4701,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel66.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton34.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton34.setText("Campaña Hoy");
@@ -4683,15 +4780,35 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
         jButton62.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton62.setText("Zonas");
+        jButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton62ActionPerformed(evt);
+            }
+        });
 
         jButton63.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton63.setText("Marcación");
+        jButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton63ActionPerformed(evt);
+            }
+        });
 
         jButton64.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton64.setText("Campañas");
+        jButton64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton64ActionPerformed(evt);
+            }
+        });
 
         jButton65.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton65.setText("Eliminar C");
+        jButton65.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton65ActionPerformed(evt);
+            }
+        });
 
         jLabel123.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel123.setText("Campañas Día Siguiente");
@@ -4813,7 +4930,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel81.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel82.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel82.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel82.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CmbAlmacen" }));
 
@@ -4838,7 +4955,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jButton77.setText("Limpiar");
 
         jPanel85.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel85.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel85.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton46.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton46.setText("Todos");
@@ -4995,10 +5112,20 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable27MouseClicked(evt);
+            }
+        });
         jScrollPane33.setViewportView(jTable27);
 
         jButton85.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton85.setText("Pedidos InBound");
+        jButton85.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton85ActionPerformed(evt);
+            }
+        });
 
         jPanel19.setBackground(new java.awt.Color(245, 245, 245));
         jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -5177,7 +5304,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         loginPanel.setBackground(new java.awt.Color(245, 245, 245));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         claveTxt.setText("aPasswordField1");
 
@@ -5636,7 +5763,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelarLlamadaBtn1ActionPerformed
 
     private void retomarGestionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retomarGestionBtn1ActionPerformed
-        abrirVentanaSecundaria(vRetomarGestion);
+        abrirDialog(dRetomarGestion);
     }//GEN-LAST:event_retomarGestionBtn1ActionPerformed
 
     private void acercaDeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeItemActionPerformed
@@ -5654,7 +5781,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     private void salirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirItemActionPerformed
         vAlmacenes.dispose();
         vRetomarGestion.dispose();
-        vNit.dispose();
+        //dNit.dispose();
         vSerCliente.dispose();
 
         this.dispose();
@@ -5666,7 +5793,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField176ActionPerformed
 
     private void crearClienteBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearClienteBtn1ActionPerformed
-        abrirVentanaSecundaria(vNit);
+        abrirDialog(dNit);
     }//GEN-LAST:event_crearClienteBtn1ActionPerformed
 
     private void clientesPorLlamarTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1MouseClicked
@@ -5694,7 +5821,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_clientesLlamarMasTardeTable1MouseClicked
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
-        abrirVentanaSecundaria(vNit);
+        abrirDialog(dNit);
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
@@ -5702,7 +5829,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
-        abrirVentanaSecundaria(vOftasDsctos);
+        abrirDialog(dOftasDsctos);
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
@@ -5712,6 +5839,100 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         navegar("Pedidos Virtuales", pedVirtualesPanel);
     }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
+        abrirDialog(dOftasDsctos);
+    }//GEN-LAST:event_jButton88ActionPerformed
+
+    private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
+        abrirVentanaAlmacenes("PedidosTransmitidos");
+    }//GEN-LAST:event_jButton87ActionPerformed
+
+    private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
+        navegar("Pedidos Virtuales", pedVirtualesPanel);
+    }//GEN-LAST:event_jButton89ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        navegar("Gestión Campañas", gesCampaniasPPanel);
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        abrirVentanaAlmacenes("SubirArchivoCampanias");
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        navegar("Marcación Aut / Manual", marcacionPanel);
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        abrirVentanaAlmacenes("CambiarCuOperador");
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        navegar("Marcación Aut / Manual", marcacionPanel);
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        abrirVentanaAlmacenes("CambiarCuOperador");
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton92ActionPerformed
+        navegar("Marcación Aut / Manual", marcacionPanel);
+    }//GEN-LAST:event_jButton92ActionPerformed
+
+    private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
+        abrirVentanaAlmacenes("CambiarCuOperador");
+    }//GEN-LAST:event_jButton91ActionPerformed
+
+    private void jButton104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton104ActionPerformed
+        navegar("Gestión Campañas", gesCampaniasPPanel);
+    }//GEN-LAST:event_jButton104ActionPerformed
+
+    private void jButton103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton103ActionPerformed
+        //Subir plano my
+        abrirVentanaAlmacenes("SubirArchivoCampanias");
+    }//GEN-LAST:event_jButton103ActionPerformed
+
+    private void jButton102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton102ActionPerformed
+        navegar("Marcación Aut / Manual", marcacionPanel);
+    }//GEN-LAST:event_jButton102ActionPerformed
+
+    private void jButton101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton101ActionPerformed
+        //Procesos especiales -> Mayoreo -> cambiar zona del operador
+        abrirVentanaAlmacenes("CambiarCuOperador");
+    }//GEN-LAST:event_jButton101ActionPerformed
+
+    private void jTable24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable24MouseClicked
+        if (evt.getClickCount() == 2) {
+            abrirDialog(dProcedimiento);
+        }
+    }//GEN-LAST:event_jTable24MouseClicked
+
+    private void jButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton63ActionPerformed
+        navegar("Marcación Aut / Manual", marcacionPanel);
+    }//GEN-LAST:event_jButton63ActionPerformed
+
+    private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
+        abrirVentanaAlmacenes("CambiarCuOperador");
+    }//GEN-LAST:event_jButton62ActionPerformed
+
+    private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
+        abrirVentanaAlmacenes("SubirArchivoCampanias");
+    }//GEN-LAST:event_jButton64ActionPerformed
+
+    private void jButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton65ActionPerformed
+        navegar("Gestión Campañas", gesCampaniasPPanel);
+    }//GEN-LAST:event_jButton65ActionPerformed
+
+    private void jTable27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable27MouseClicked
+        if (evt.getClickCount() == 2) {
+            abrirDialog(dDetPedido);
+        }
+    }//GEN-LAST:event_jTable27MouseClicked
+
+    private void jButton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton85ActionPerformed
+        navegar("Pedidos InBound", pedInPanel);
+    }//GEN-LAST:event_jButton85ActionPerformed
 
     public void navegar(String titulo, Component componente) {
         if (opciones2Pane.isAncestorOf(componente)) {

@@ -264,7 +264,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         jCheckBox7 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        jPanel18 = new javax.swing.JPanel();
+        cambiarCuPanel = new javax.swing.JPanel();
         jPanel98 = new javax.swing.JPanel();
         jPanel99 = new javax.swing.JPanel();
         jLabel153 = new javax.swing.JLabel();
@@ -391,7 +391,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jTextField172 = new javax.swing.JTextField();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
-        jPanel87 = new javax.swing.JPanel();
+        subirCampaniasPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel112 = new javax.swing.JPanel();
         jRadioButton5 = new javax.swing.JRadioButton();
@@ -439,7 +439,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         opcionesPanel.setBackground(new java.awt.Color(245, 245, 245));
-        opcionesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        opcionesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jPanel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -636,11 +636,11 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jLabel5.setText("MAESTRO DE CLIENTES");
 
         jPanel33.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel33.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autorización", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel33.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Autorización", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tratamiento", "Señor", "Señora" }));
 
-        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton10.setText("CC");
@@ -784,7 +784,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel48.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Básicos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Básicos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Origen Cliente", "E-Escritorio" }));
 
@@ -806,7 +806,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jComboBox29.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ciudad", " " }));
 
         jPanel49.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Horario de Llamada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Horario de Llamada", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
@@ -990,7 +990,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel50.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel50.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preferencias y Gustos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel50.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Preferencias y Gustos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel19.setText("Fecha Nacimiento");
@@ -1019,7 +1019,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         });
 
         jPanel51.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton28.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1071,7 +1071,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel52.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jCheckBox21.setBackground(new java.awt.Color(245, 245, 245));
         jCheckBox21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1379,7 +1379,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jButton30.setText("Consultar");
 
         jPanel54.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton48.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton48.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1426,7 +1426,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel55.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Categoria de Precio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Categoria de Precio", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton53.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton53.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1464,7 +1464,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel56.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ordenar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ordenar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton52.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1510,7 +1510,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel57.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel57.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel57.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel63.setText("Código Cliente");
@@ -1654,7 +1654,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jScrollPane17.setViewportView(jTable11);
 
         jPanel58.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel58.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel58.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton58.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -1686,7 +1686,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel67.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel67.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel67.setText("NIT");
@@ -1796,7 +1796,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel66.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Almacén1", "Almacén2", "Almacén3", "Almacén4" }));
 
@@ -1908,7 +1908,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jLabel139.setText("Resumen por Televendedor");
 
         jPanel59.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel59.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Exportar Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel59.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Exportar Datos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton2.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton2.setText("Detallado");
@@ -2020,7 +2020,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel70.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel70.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel70.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gestión", " " }));
 
@@ -2105,7 +2105,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jScrollPane41.setViewportView(jTable35);
 
         jPanel63.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel63.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel63.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton9.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton9.setText("Exportar");
@@ -2252,13 +2252,13 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
 
         opcionesAlmacenesPane.addTab("Clientes", clientesPanel);
 
-        jPanel18.setBackground(new java.awt.Color(245, 245, 245));
+        cambiarCuPanel.setBackground(new java.awt.Color(245, 245, 245));
 
         jPanel98.setBackground(new java.awt.Color(245, 245, 245));
         jPanel98.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel99.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel99.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel99.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jLabel153.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel153.setText("Org Ventas");
@@ -2296,7 +2296,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         );
 
         jPanel100.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel100.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel100.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton70.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton70.setText("Todos los Almacenes");
@@ -2463,24 +2463,24 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        javax.swing.GroupLayout cambiarCuPanelLayout = new javax.swing.GroupLayout(cambiarCuPanel);
+        cambiarCuPanel.setLayout(cambiarCuPanelLayout);
+        cambiarCuPanelLayout.setHorizontalGroup(
+            cambiarCuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cambiarCuPanelLayout.createSequentialGroup()
                 .addGap(452, 452, 452)
                 .addComponent(jPanel98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(498, Short.MAX_VALUE))
         );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        cambiarCuPanelLayout.setVerticalGroup(
+            cambiarCuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cambiarCuPanelLayout.createSequentialGroup()
                 .addGap(145, 145, 145)
                 .addComponent(jPanel98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(303, Short.MAX_VALUE))
         );
 
-        opcionesAlmacenesPane.addTab("Cambiar Centro de Utilidad del Operador", jPanel18);
+        opcionesAlmacenesPane.addTab("Cambiar Centro de Utilidad del Operador", cambiarCuPanel);
 
         jPanel21.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -2488,7 +2488,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel101.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel103.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel103.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel103.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton72.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton72.setText("Todos los Almacenes");
@@ -2668,7 +2668,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel102.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel104.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel104.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel104.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Operador", " " }));
 
@@ -2805,7 +2805,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel105.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel106.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel106.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel106.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Operador", " " }));
 
@@ -2820,7 +2820,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jRadioButton4.setText("Detallado");
 
         jPanel42.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -2894,7 +2894,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jLabel2.setText("Pedidos Transmitidos");
 
         jPanel107.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel107.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel107.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jCheckBox5.setBackground(new java.awt.Color(245, 245, 245));
         jCheckBox5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -3122,7 +3122,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jPanel108.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel109.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel109.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel109.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Empresa", " " }));
 
@@ -3137,7 +3137,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jRadioButton7.setText("Histórico");
 
         jPanel43.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
@@ -3250,7 +3250,7 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
         jLabel3.setText("Ventas");
 
         jPanel110.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel110.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel110.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jLabel183.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel183.setText("Venta");
@@ -3364,13 +3364,13 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
 
         opcionesAlmacenesPane.addTab("Consulta Empleados", jPanel25);
 
-        jPanel87.setBackground(new java.awt.Color(245, 245, 245));
+        subirCampaniasPanel.setBackground(new java.awt.Color(245, 245, 245));
 
         jPanel3.setBackground(new java.awt.Color(245, 245, 245));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel112.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel112.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha y Nombre de la Campaña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel112.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha y Nombre de la Campaña", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jRadioButton5.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -3482,29 +3482,29 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
-        jPanel87.setLayout(jPanel87Layout);
-        jPanel87Layout.setHorizontalGroup(
-            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel87Layout.createSequentialGroup()
+        javax.swing.GroupLayout subirCampaniasPanelLayout = new javax.swing.GroupLayout(subirCampaniasPanel);
+        subirCampaniasPanel.setLayout(subirCampaniasPanelLayout);
+        subirCampaniasPanelLayout.setHorizontalGroup(
+            subirCampaniasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subirCampaniasPanelLayout.createSequentialGroup()
                 .addGap(357, 357, 357)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(414, Short.MAX_VALUE))
         );
-        jPanel87Layout.setVerticalGroup(
-            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel87Layout.createSequentialGroup()
+        subirCampaniasPanelLayout.setVerticalGroup(
+            subirCampaniasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(subirCampaniasPanelLayout.createSequentialGroup()
                 .addGap(151, 151, 151)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(427, Short.MAX_VALUE))
         );
 
-        opcionesAlmacenesPane.addTab("Subir Archivo Campañas", jPanel87);
+        opcionesAlmacenesPane.addTab("Subir Archivo Campañas", subirCampaniasPanel);
 
         jPanel2.setBackground(new java.awt.Color(245, 245, 245));
 
         jPanel111.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel111.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel111.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton74.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton74.setText("Todos los Almacenes");
@@ -3851,11 +3851,20 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
                 navegarClientes("Depuración de Clientes", depuracionClientesPanel);
                 opcionesClientesPane.setSelectedComponent(depuracionClientesPanel);
                 break;
+            
+            case "SubirArchivoCampanias":
+                opcionesAlmacenesPane.setSelectedComponent(subirCampaniasPanel);
+                break;
+                
+            case "CambiarCuOperador":
+                opcionesAlmacenesPane.setSelectedComponent(cambiarCuPanel);
+                break;
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField archivoCampaniaTxt;
+    private javax.swing.JPanel cambiarCuPanel;
     private javax.swing.JLabel clientesNoGestionadosIconL;
     private javax.swing.JLabel clientesNoGestionadosL;
     private javax.swing.JPanel clientesNoGestionadosPanel;
@@ -4045,7 +4054,6 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel25;
@@ -4076,7 +4084,6 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel68;
     private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel70;
-    private javax.swing.JPanel jPanel87;
     private javax.swing.JPanel jPanel98;
     private javax.swing.JPanel jPanel99;
     private javax.swing.JRadioButton jRadioButton1;
@@ -4201,5 +4208,6 @@ public class VentanaAlmacenes extends javax.swing.JFrame {
     private javax.swing.JPanel pedTransPanel;
     private javax.swing.JPanel pedVSFacPanel;
     private javax.swing.JButton salirBtn;
+    private javax.swing.JPanel subirCampaniasPanel;
     // End of variables declaration//GEN-END:variables
 }

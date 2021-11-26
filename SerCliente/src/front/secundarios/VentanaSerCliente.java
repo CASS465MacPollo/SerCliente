@@ -10,6 +10,7 @@ import front.VentanaPrincipalMostrador;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
@@ -20,9 +21,8 @@ public class VentanaSerCliente extends javax.swing.JFrame {
 
     private VentanaPrincipalMostrador vPrincipal;
     private VentanaAlmacenes vAlmacenes;
-    private VentanaNit vNit;
-    private VentanaOftasDsctos vOftasDsctos;
-    private VentanaDetPedido vDetPedido;
+    private DialogOftasDsctos dOftasDsctos;
+    private DialogDetPedido dDetPedido;
     
     /**
      * Creates new form VentanaSerCliente
@@ -32,9 +32,8 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         
         this.vPrincipal = vPrincipal;
         this.vAlmacenes = vAlmacenes;
-        vNit = new VentanaNit();
-        vOftasDsctos = new VentanaOftasDsctos();
-        vDetPedido = new VentanaDetPedido();
+        dOftasDsctos = new DialogOftasDsctos(this, true);
+        dDetPedido = new DialogDetPedido(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -178,7 +177,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         jLabel61.setText("Teléfonos");
 
         jPanel51.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton28.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -230,7 +229,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         );
 
         jPanel52.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jCheckBox21.setBackground(new java.awt.Color(245, 245, 245));
         jCheckBox21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -542,7 +541,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         );
 
         jPanel49.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
@@ -663,7 +662,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         );
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -739,7 +738,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         tipoGestionPanel.setBackground(new java.awt.Color(129, 218, 87));
-        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         tipoGestionPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tipoGestionPanelMouseClicked(evt);
@@ -923,20 +922,8 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         jLabel91.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel91.setText("Cantidad de Llamadas Hoy");
 
-        jTextField85.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField85ActionPerformed(evt);
-            }
-        });
-
         jLabel92.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel92.setText("Última Gestión");
-
-        jTextField86.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField86ActionPerformed(evt);
-            }
-        });
 
         jLabel93.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel93.setText("Fecha y Hora");
@@ -1190,14 +1177,6 @@ public class VentanaSerCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField84ActionPerformed
 
-    private void jTextField85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField85ActionPerformed
-
-    private void jTextField86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField86ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField86ActionPerformed
-
     private void jTextField87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField87ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField87ActionPerformed
@@ -1221,12 +1200,12 @@ public class VentanaSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        abrirVentanaSecundaria(vOftasDsctos);
+        abrirDialog(dOftasDsctos);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirVentanaSecundaria(vDetPedido);
+            abrirDialog(dDetPedido);
         }
     }//GEN-LAST:event_jTable1MouseClicked
     
@@ -1249,6 +1228,14 @@ public class VentanaSerCliente extends javax.swing.JFrame {
             ventana.toFront();
         } else {
             ventana.setVisible(true);
+        }
+    }
+    
+    private void abrirDialog(JDialog modal) {
+        if (modal.isShowing()) {
+            modal.toFront();
+        } else {
+            modal.setVisible(true);
         }
     }
     

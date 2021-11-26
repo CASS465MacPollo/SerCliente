@@ -12,12 +12,13 @@ import javax.swing.ImageIcon;
  *
  * @author Oficina
  */
-public class VentanaDetPedido extends javax.swing.JFrame {
+public class DialogDetPedido extends javax.swing.JDialog {
 
     /**
      * Creates new form VentanaDetPedido
      */
-    public VentanaDetPedido() {
+    public DialogDetPedido(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         
         //Icono del frame

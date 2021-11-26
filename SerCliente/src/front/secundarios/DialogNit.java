@@ -12,12 +12,13 @@ import javax.swing.ImageIcon;
  *
  * @author Oficina
  */
-public class VentanaNit extends javax.swing.JFrame {
+public class DialogNit extends javax.swing.JDialog {
 
     /**
      * Creates new form VentanaRetomarGestion
      */
-    public VentanaNit() {
+    public DialogNit(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         
         //Icono del frame
