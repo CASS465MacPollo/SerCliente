@@ -6,6 +6,7 @@
 package front;
 
 import com.sun.glass.events.KeyEvent;
+import front.secundarios.FrmAcercaDe;
 import front.secundarios.FrmCupoEmpleado;
 import front.secundarios.FrmDetPedido;
 import front.secundarios.FrmRetomarGestion;
@@ -13,6 +14,11 @@ import front.secundarios.FrmNit;
 import front.secundarios.FrmOftasDsctos;
 import front.secundarios.FrmProcedimiento;
 import front.secundarios.FrmSerCliente;
+import front.secundarios.almacenes.FrmClientesLlamarMT;
+import front.secundarios.almacenes.FrmClientesNoGestionados;
+import front.secundarios.almacenes.FrmConsultaClientes;
+import front.secundarios.almacenes.FrmCreacionClientes;
+import front.secundarios.almacenes.FrmDepuracionClientes;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -42,6 +48,11 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     private FrmRetomarGestion dRetomarGestion;
     private FrmProcedimiento dProcedimiento;
     private FrmDetPedido dDetPedido;
+    private FrmCreacionClientes dCreacionClientes;
+    private FrmDepuracionClientes dDepuracionClientes;
+    private FrmConsultaClientes dConsultaClientes;
+    private FrmClientesLlamarMT dClientesLlamarMT;
+    private FrmClientesNoGestionados dClientesNoGestionados;
 
     /**
      * Creates new form VentanaMenu
@@ -57,6 +68,11 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         dRetomarGestion = new FrmRetomarGestion(this, true, vAlmacenes);
         dProcedimiento = new FrmProcedimiento(this, true);
         dDetPedido = new FrmDetPedido(this, true);
+        dCreacionClientes = new FrmCreacionClientes(this, true);
+        dDepuracionClientes = new FrmDepuracionClientes(this, true);
+        dConsultaClientes = new FrmConsultaClientes(this, true);
+        dClientesLlamarMT = new FrmClientesLlamarMT(this, true);
+        dClientesNoGestionados = new FrmClientesNoGestionados(this, true);
 
         ajustarComponentes();
     }
@@ -5663,28 +5679,33 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel101MouseClicked
 
     private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseClicked
-        //popupAlmacenes.show(evt.getComponent(), evt.getX(), evt.getY());
-        abrirVentanaSecundaria(vAlmacenes);
+        popupAlmacenes.show(evt.getComponent(), evt.getX(), evt.getY());
+        //abrirVentanaSecundaria(vAlmacenes);
     }//GEN-LAST:event_jPanel15MouseClicked
 
     private void creacionClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creacionClientesActionPerformed
         //navegar("Creación de Clientes", creacionClientesPanel);
+        abrirDialog(dCreacionClientes);
     }//GEN-LAST:event_creacionClientesActionPerformed
 
     private void depuracionClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depuracionClientesItemActionPerformed
         //navegar("Depuración de Clientes", depuracionClientesPanel);
+        abrirDialog(dDepuracionClientes);
     }//GEN-LAST:event_depuracionClientesItemActionPerformed
 
     private void consClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consClientesItemActionPerformed
         //navegar("Consulta de Clientes", consClientesPanel);
+        abrirDialog(dConsultaClientes);
     }//GEN-LAST:event_consClientesItemActionPerformed
 
     private void llamarLuegoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_llamarLuegoItemActionPerformed
         // navegar("Clientes Llamar más Tarde", llamarLuegoPanel);
+        abrirDialog(dClientesLlamarMT);
     }//GEN-LAST:event_llamarLuegoItemActionPerformed
 
     private void clientesNoGestionadosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesNoGestionadosItemActionPerformed
         //navegar("Clientes no Gestionados", clientesNoGestionadosPanel);
+        abrirDialog(dClientesNoGestionados);
     }//GEN-LAST:event_clientesNoGestionadosItemActionPerformed
 
     private void cmbCUOperadorItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCUOperadorItemActionPerformed
