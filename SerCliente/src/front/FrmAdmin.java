@@ -12,12 +12,12 @@ import javax.swing.ImageIcon;
  *
  * @author Oficina
  */
-public class VentanaAdmin extends javax.swing.JFrame {
+public class FrmAdmin extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaAdmin
      */
-    public VentanaAdmin() {
+    public FrmAdmin() {
         initComponents();
 
         //Icono del frame
@@ -497,7 +497,7 @@ public class VentanaAdmin extends javax.swing.JFrame {
     private void opcionesPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_opcionesPaneStateChanged
         if (opcionesPane.getSelectedIndex() == 3) { //Salir
             this.dispose();
-            new VentanaCall().setVisible(true);
+            new FrmCall().setVisible(true);
         }
     }//GEN-LAST:event_opcionesPaneStateChanged
 

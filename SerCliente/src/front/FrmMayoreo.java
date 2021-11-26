@@ -19,12 +19,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author Oficina
  */
-public class VentanaMayoreo extends javax.swing.JFrame {
+public class FrmMayoreo extends javax.swing.JFrame {
 
     /**
-     * Creates new form VentanaAlmacenes
+     * Creates new form FrmAlmacenes
      */
-    public VentanaMayoreo() {
+    public FrmMayoreo() {
         initComponents();
 
         //Icono del frame
@@ -134,7 +134,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         jPanel31.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel60.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel60.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel60.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jLabel119.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel119.setText("Estado Sistema");
@@ -178,7 +178,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         );
 
         jPanel64.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel64.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora(s)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel64.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora(s)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton30.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton30.setText("Todas");
@@ -264,7 +264,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         jButton54.setText("Aceptar");
 
         jPanel65.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel65.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Zona(s)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel65.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Zona(s)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton32.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton32.setText("Todas");
@@ -380,7 +380,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField121))
                             .addComponent(jPanel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +430,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel112.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel112.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha y Nombre de la Campaña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel112.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha y Nombre de la Campaña", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jRadioButton5.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -577,7 +577,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         jPanel22.setBackground(new java.awt.Color(245, 245, 245));
 
         jPanel113.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel113.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel113.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton76.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton76.setText("Todas");
@@ -769,7 +769,7 @@ public class VentanaMayoreo extends javax.swing.JFrame {
         try {
             javax.swing.UIManager.setLookAndFeel(look);
         } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(VentanaAlmacenes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FrmAlmacenes.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

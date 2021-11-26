@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author cass465
  */
-public class VentanaCall extends javax.swing.JFrame {
+public class FrmCall extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public VentanaCall() {
+    public FrmCall() {
         initComponents();
 
         //Icono del frame
@@ -64,7 +64,7 @@ public class VentanaCall extends javax.swing.JFrame {
         iconMacL.setBackground(new java.awt.Color(255, 255, 255));
 
         callPanel.setBackground(new java.awt.Color(245, 245, 245));
-        callPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Call Center", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        callPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Call Center", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         aceptarBtn.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         aceptarBtn.setText("Aceptar");
@@ -180,7 +180,7 @@ public class VentanaCall extends javax.swing.JFrame {
                 callSeleccionado = "Mayoreo";
             }
 
-            new VentanaLogin(callSeleccionado).setVisible(true);
+            new FrmLogin(callSeleccionado).setVisible(true);
 
             //Cierra el frame
             this.dispose();
@@ -211,14 +211,22 @@ public class VentanaCall extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -231,7 +239,7 @@ public class VentanaCall extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaCall().setVisible(true);
+                new FrmCall().setVisible(true);
             }
         });
     }

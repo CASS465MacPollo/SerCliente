@@ -12,12 +12,12 @@ import javax.swing.ImageIcon;
  *
  * @author Oficina
  */
-public class DialogNit extends javax.swing.JDialog {
+public class FrmNit extends javax.swing.JDialog {
 
     /**
      * Creates new form VentanaRetomarGestion
      */
-    public DialogNit(java.awt.Frame parent, boolean modal) {
+    public FrmNit(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
@@ -65,7 +65,7 @@ public class DialogNit extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Nit");
@@ -83,7 +83,7 @@ public class DialogNit extends javax.swing.JDialog {
         jLabel17.setText("Teléfono");
 
         jPanel71.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado del Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado del Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton36.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton36.setText("Activo");

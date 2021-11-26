@@ -5,8 +5,8 @@
  */
 package front.secundarios;
 
-import front.VentanaAlmacenes;
-import front.VentanaPrincipalMostrador;
+import front.FrmAlmacenes;
+import front.FrmPrincipalMostrador;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -17,23 +17,23 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class VentanaSerCliente extends javax.swing.JFrame {
+public class FrmSerCliente extends javax.swing.JFrame {
 
-    private VentanaPrincipalMostrador vPrincipal;
-    private VentanaAlmacenes vAlmacenes;
-    private DialogOftasDsctos dOftasDsctos;
-    private DialogDetPedido dDetPedido;
+    private FrmPrincipalMostrador vPrincipal;
+    private FrmAlmacenes vAlmacenes;
+    private FrmOftasDsctos dOftasDsctos;
+    private FrmDetPedido dDetPedido;
     
     /**
      * Creates new form VentanaSerCliente
      */
-    public VentanaSerCliente(VentanaPrincipalMostrador vPrincipal, VentanaAlmacenes vAlmacenes) {
+    public FrmSerCliente(FrmPrincipalMostrador vPrincipal, FrmAlmacenes vAlmacenes) {
         initComponents();
         
         this.vPrincipal = vPrincipal;
         this.vAlmacenes = vAlmacenes;
-        dOftasDsctos = new DialogOftasDsctos(this, true);
-        dDetPedido = new DialogDetPedido(this, true);
+        dOftasDsctos = new FrmOftasDsctos(this, true);
+        dDetPedido = new FrmDetPedido(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -1196,7 +1196,7 @@ public class VentanaSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tipoGestionPanelMouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        new VentanaPedidos(vPrincipal, vAlmacenes).setVisible(true);
+        new FrmPedidos(vPrincipal, vAlmacenes).setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed

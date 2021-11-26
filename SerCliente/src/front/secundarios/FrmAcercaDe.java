@@ -13,14 +13,14 @@ import javax.swing.ImageIcon;
  *
  * @author cass465
  */
-public class VentanaAcercaDe extends javax.swing.JFrame {
+public class FrmAcercaDe extends javax.swing.JFrame {
     
     String callSeleccionado;
 
     /**
      * Creates new form NewJFrame
      */
-    public VentanaAcercaDe() {
+    public FrmAcercaDe() {
         initComponents();
 
         //Icono del frame
@@ -58,7 +58,7 @@ public class VentanaAcercaDe extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         loginPanel.setBackground(new java.awt.Color(245, 245, 245));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acerca De", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acerca De", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         acercaDeL.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         acercaDeL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

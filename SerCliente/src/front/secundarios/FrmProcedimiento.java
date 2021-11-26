@@ -8,12 +8,12 @@ package front.secundarios;
  *
  * @author Oficina
  */
-public class DialogProcedimiento extends javax.swing.JDialog {
+public class FrmProcedimiento extends javax.swing.JDialog {
 
     /**
      * Creates new form DialogProcedimiento
      */
-    public DialogProcedimiento(java.awt.Frame parent, boolean modal) {
+    public FrmProcedimiento(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }

@@ -5,8 +5,8 @@
  */
 package front.secundarios;
 
-import front.VentanaAlmacenes;
-import front.VentanaPrincipalMostrador;
+import front.FrmAlmacenes;
+import front.FrmPrincipalMostrador;
 import java.awt.Color;
 import java.io.IOException;
 import java.util.Arrays;
@@ -21,23 +21,23 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class VentanaPedidos extends javax.swing.JFrame {
+public class FrmPedidos extends javax.swing.JFrame {
 
-    private VentanaPrincipalMostrador vPrincipal;
-    private VentanaAlmacenes vAlmacenes;
-    private DialogOftasDsctos dOftasDsctos;
-    private DialogDetPedido dDetPedido;
+    private FrmPrincipalMostrador vPrincipal;
+    private FrmAlmacenes vAlmacenes;
+    private FrmOftasDsctos dOftasDsctos;
+    private FrmDetPedido dDetPedido;
     
     /**
      * Creates new form VentanaSerCliente
      */
-    public VentanaPedidos(VentanaPrincipalMostrador vPrincipal, VentanaAlmacenes vAlmacenes) {
+    public FrmPedidos(FrmPrincipalMostrador vPrincipal, FrmAlmacenes vAlmacenes) {
         initComponents();
         
         this.vPrincipal = vPrincipal;
         this.vAlmacenes = vAlmacenes;
-        dOftasDsctos = new DialogOftasDsctos(this, true);
-        dDetPedido = new DialogDetPedido(this, true);
+        dOftasDsctos = new FrmOftasDsctos(this, true);
+        dDetPedido = new FrmDetPedido(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -317,7 +317,7 @@ public class VentanaPedidos extends javax.swing.JFrame {
         );
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -446,7 +446,7 @@ public class VentanaPedidos extends javax.swing.JFrame {
         });
 
         tipoGestionPanel.setBackground(new java.awt.Color(129, 218, 87));
-        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         tipoGestionPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tipoGestionPanelMouseClicked(evt);
@@ -649,7 +649,7 @@ public class VentanaPedidos extends javax.swing.JFrame {
         );
 
         jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "???", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "???", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -673,7 +673,7 @@ public class VentanaPedidos extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable2);
 
         jScrollPane4.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

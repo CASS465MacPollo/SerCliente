@@ -13,14 +13,14 @@ import javax.swing.ImageIcon;
  *
  * @author cass465
  */
-public class VentanaLogin extends javax.swing.JFrame {
+public class FrmLogin extends javax.swing.JFrame {
 
     String callSeleccionado;
 
     /**
      * Creates new form NewJFrame
      */
-    public VentanaLogin(String callSeleccionado) {
+    public FrmLogin(String callSeleccionado) {
         this.callSeleccionado = callSeleccionado;
 
         initComponents();
@@ -67,7 +67,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         loginPanel.setBackground(new java.awt.Color(245, 245, 245));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         salirBtn.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         salirBtn.setText("Salir");
@@ -201,15 +201,15 @@ public class VentanaLogin extends javax.swing.JFrame {
 
     private void aceptarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarBtnActionPerformed
         if (usuarioTxt.getText().equals("Admin")) {
-            new VentanaAdmin().setVisible(true);
+            new FrmAdmin().setVisible(true);
             this.dispose();
             return;
         }
 
         if (callSeleccionado.equals("Mostrador")) {
-            new VentanaPrincipalMostrador().setVisible(true);
+            new FrmPrincipalMostrador().setVisible(true);
         } else {
-            new VentanaPrincipalMayoreo().setVisible(true);
+            new FrmPrincipalMayoreo().setVisible(true);
         }
 
         //Cierra el frame
@@ -217,7 +217,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_aceptarBtnActionPerformed
 
     private void atrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasBtnActionPerformed
-        new VentanaCall().setVisible(true);
+        new FrmCall().setVisible(true);
 
         //Cierra el frame
         this.dispose();

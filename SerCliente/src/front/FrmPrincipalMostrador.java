@@ -6,14 +6,13 @@
 package front;
 
 import com.sun.glass.events.KeyEvent;
-import front.secundarios.DialogCupoEmpleado;
-import front.secundarios.DialogDetPedido;
-import front.secundarios.DialogRetomarGestion;
-import front.secundarios.DialogNit;
-import front.secundarios.DialogOftasDsctos;
-import front.secundarios.DialogProcedimiento;
-import front.secundarios.VentanaRetomarGestion;
-import front.secundarios.VentanaSerCliente;
+import front.secundarios.FrmCupoEmpleado;
+import front.secundarios.FrmDetPedido;
+import front.secundarios.FrmRetomarGestion;
+import front.secundarios.FrmNit;
+import front.secundarios.FrmOftasDsctos;
+import front.secundarios.FrmProcedimiento;
+import front.secundarios.FrmSerCliente;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -32,34 +31,32 @@ import javax.swing.JTabbedPane;
  *
  * @author cass465
  */
-public class VentanaPrincipalMostrador extends javax.swing.JFrame {
+public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
-    private VentanaAlmacenes vAlmacenes;
-    private VentanaRetomarGestion vRetomarGestion;
-    private DialogNit dNit;
-    private VentanaSerCliente vSerCliente;
-    private DialogOftasDsctos dOftasDsctos;
-    private DialogCupoEmpleado dCupoEmpleado;
-    private DialogRetomarGestion dRetomarGestion;
-    private DialogProcedimiento dProcedimiento;
-    private DialogDetPedido dDetPedido;
+    private FrmAlmacenes vAlmacenes;
+    private FrmNit dNit;
+    private FrmSerCliente vSerCliente;
+    private FrmOftasDsctos dOftasDsctos;
+    private FrmCupoEmpleado dCupoEmpleado;
+    private FrmRetomarGestion dRetomarGestion;
+    private FrmProcedimiento dProcedimiento;
+    private FrmDetPedido dDetPedido;
 
     /**
      * Creates new form VentanaMenu
      */
-    public VentanaPrincipalMostrador() {
+    public FrmPrincipalMostrador() {
         initComponents();
 
-        vAlmacenes = new VentanaAlmacenes();
-        vRetomarGestion = new VentanaRetomarGestion(this, vAlmacenes);
-        dNit = new DialogNit(this, true);
-        vSerCliente = new VentanaSerCliente(this, vAlmacenes);
-        dOftasDsctos = new DialogOftasDsctos(this, true);
-        dCupoEmpleado = new DialogCupoEmpleado(this, true);
-        dRetomarGestion = new DialogRetomarGestion(this, true, vAlmacenes);
-        dProcedimiento = new DialogProcedimiento(this, true);
-        dDetPedido = new DialogDetPedido(this, true);
+        vAlmacenes = new FrmAlmacenes();
+        dNit = new FrmNit(this, true);
+        vSerCliente = new FrmSerCliente(this, vAlmacenes);
+        dOftasDsctos = new FrmOftasDsctos(this, true);
+        dCupoEmpleado = new FrmCupoEmpleado(this, true);
+        dRetomarGestion = new FrmRetomarGestion(this, true, vAlmacenes);
+        dProcedimiento = new FrmProcedimiento(this, true);
+        dDetPedido = new FrmDetPedido(this, true);
 
         ajustarComponentes();
     }
@@ -5767,7 +5764,7 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_retomarGestionBtn1ActionPerformed
 
     private void acercaDeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeItemActionPerformed
-        new VentanaAcercaDe().setVisible(true);
+        new FrmAcercaDe().setVisible(true);
     }//GEN-LAST:event_acercaDeItemActionPerformed
 
     private void cambioClaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambioClaveItemActionPerformed
@@ -5780,12 +5777,10 @@ public class VentanaPrincipalMostrador extends javax.swing.JFrame {
 
     private void salirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirItemActionPerformed
         vAlmacenes.dispose();
-        vRetomarGestion.dispose();
-        //dNit.dispose();
         vSerCliente.dispose();
 
         this.dispose();
-        new VentanaCall().setVisible(true);
+        new FrmCall().setVisible(true);
     }//GEN-LAST:event_salirItemActionPerformed
 
     private void jTextField176ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField176ActionPerformed

@@ -18,18 +18,18 @@ import javax.swing.ImageIcon;
  *
  * @author cass465
  */
-public class VentanaPrincipalMayoreo extends javax.swing.JFrame {
+public class FrmPrincipalMayoreo extends javax.swing.JFrame {
 
     private Dimension dimension;
-    private VentanaMayoreo vMayoreo;
+    private FrmMayoreo vMayoreo;
 
     /**
      * Creates new form VentanaMenu
      */
-    public VentanaPrincipalMayoreo() {
+    public FrmPrincipalMayoreo() {
         initComponents();
 
-        vMayoreo = new VentanaMayoreo();
+        vMayoreo = new FrmMayoreo();
         ajustarComponentes();
     }
 
@@ -5031,7 +5031,7 @@ public class VentanaPrincipalMayoreo extends javax.swing.JFrame {
     }//GEN-LAST:event_retomarGestionBtn1ActionPerformed
 
     private void acercaDeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeItemActionPerformed
-        new VentanaAcercaDe().setVisible(true);
+        new FrmAcercaDe().setVisible(true);
     }//GEN-LAST:event_acercaDeItemActionPerformed
 
     private void cambioClaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambioClaveItemActionPerformed
@@ -5047,7 +5047,7 @@ public class VentanaPrincipalMayoreo extends javax.swing.JFrame {
             vMayoreo.dispose();
         }
         this.dispose();
-        new VentanaCall().setVisible(true);
+        new FrmCall().setVisible(true);
     }//GEN-LAST:event_salirItemActionPerformed
 
     private void retomarGestionBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retomarGestionBtn2ActionPerformed

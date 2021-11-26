@@ -5,18 +5,18 @@
  */
 package front.secundarios;
 
-import front.VentanaPrincipalMostrador;
+import front.FrmPrincipalMostrador;
 
 /**
  *
  * @author Oficina
  */
-public class DialogCupoEmpleado extends javax.swing.JDialog {
+public class FrmCupoEmpleado extends javax.swing.JDialog {
 
     /**
      * Creates new form CupoEmpleadoDialog
      */
-    public DialogCupoEmpleado(java.awt.Frame parent, boolean modal) {
+    public FrmCupoEmpleado(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
@@ -45,7 +45,7 @@ public class DialogCupoEmpleado extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         cupoEmpleadoPanel.setBackground(new java.awt.Color(245, 245, 245));
-        cupoEmpleadoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cupo Empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        cupoEmpleadoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cupo Empleado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel56.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

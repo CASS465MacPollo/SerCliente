@@ -16,12 +16,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author Oficina
  */
-public class VentanaAlmacenes extends javax.swing.JFrame {
+public class FrmAlmacenes extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaAlmacenes
      */
-    public VentanaAlmacenes() {
+    public FrmAlmacenes() {
         initComponents();
         ajustarComponentes();
     }

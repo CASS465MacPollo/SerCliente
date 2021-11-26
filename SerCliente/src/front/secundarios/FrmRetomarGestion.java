@@ -1,12 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package front.secundarios;
 
-import front.VentanaAlmacenes;
-import front.VentanaPrincipalMostrador;
+import front.FrmAlmacenes;
+import front.FrmPrincipalMostrador;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -15,21 +14,22 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class VentanaRetomarGestion extends javax.swing.JFrame {
-
-    private VentanaPrincipalMostrador vPrincipal;
-    private VentanaAlmacenes vAlmacenes;
-    private VentanaSerCliente vSerCliente;
+public class FrmRetomarGestion extends javax.swing.JDialog {
+    
+    private FrmPrincipalMostrador vPrincipal;
+    private FrmAlmacenes vAlmacenes;
+    private FrmSerCliente vSerCliente;
     
     /**
-     * Creates new form VentanaRetomarGestion
+     * Creates new form DialogRetomarGestion
      */
-    public VentanaRetomarGestion(VentanaPrincipalMostrador vPrincipal, VentanaAlmacenes vAlmacenes) {
+    public FrmRetomarGestion(java.awt.Frame parent, boolean modal, FrmAlmacenes vAlmacenes) {
+        super(parent, modal);
         initComponents();
         
-        this.vPrincipal = vPrincipal;
+        this.vPrincipal = (FrmPrincipalMostrador) parent;
         this.vAlmacenes = vAlmacenes;
-        vSerCliente = new VentanaSerCliente(vPrincipal, vAlmacenes);
+        vSerCliente = new FrmSerCliente(vPrincipal, vAlmacenes);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -68,8 +68,7 @@ public class VentanaRetomarGestion extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         salirBtn = new javax.swing.JButton();
 
-        setTitle("Retomar Gestión");
-        setBackground(new java.awt.Color(245, 245, 245));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -77,7 +76,7 @@ public class VentanaRetomarGestion extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Cedula Cliente");
@@ -260,15 +259,16 @@ public class VentanaRetomarGestion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
 
-    private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_salirBtnActionPerformed
-
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
+            this.dispose();
             abrirVentanaSecundaria(vSerCliente);
         }
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_salirBtnActionPerformed
 
     private void abrirVentanaSecundaria(JFrame ventana) {
         if (ventana.isShowing()) {
