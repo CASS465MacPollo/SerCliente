@@ -23,13 +23,12 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     /**
      * Creates new form DialogRetomarGestion
      */
-    public FrmRetomarGestion(java.awt.Frame parent, boolean modal, FrmAlmacenes vAlmacenes) {
+    public FrmRetomarGestion(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
         this.vPrincipal = (FrmPrincipalMostrador) parent;
-        this.vAlmacenes = vAlmacenes;
-        vSerCliente = new FrmSerCliente(vPrincipal, vAlmacenes);
+        vSerCliente = new FrmSerCliente(vPrincipal);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());

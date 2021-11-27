@@ -7,6 +7,7 @@ package front.secundarios;
 
 import front.FrmAlmacenes;
 import front.FrmPrincipalMostrador;
+import front.secundarios.almacenes.FrmCreacionClientes;
 import java.awt.Color;
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,20 +25,20 @@ import javax.swing.JFrame;
 public class FrmPedidos extends javax.swing.JFrame {
 
     private FrmPrincipalMostrador vPrincipal;
-    private FrmAlmacenes vAlmacenes;
     private FrmOftasDsctos dOftasDsctos;
     private FrmDetPedido dDetPedido;
+    private FrmCreacionClientes dCreacionClientes;
     
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmPedidos(FrmPrincipalMostrador vPrincipal, FrmAlmacenes vAlmacenes) {
+    public FrmPedidos(FrmPrincipalMostrador vPrincipal) {
         initComponents();
         
         this.vPrincipal = vPrincipal;
-        this.vAlmacenes = vAlmacenes;
         dOftasDsctos = new FrmOftasDsctos(this, true);
         dDetPedido = new FrmDetPedido(this, true);
+        dCreacionClientes = new FrmCreacionClientes(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -955,7 +956,7 @@ public class FrmPedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField86ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        abrirVentanaAlmacenes("MaestroClientes");
+        abrirDialog(dCreacionClientes);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jTextField88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField88ActionPerformed
@@ -997,28 +998,6 @@ public class FrmPedidos extends javax.swing.JFrame {
             abrirDialog(dDetPedido);
         }
     }//GEN-LAST:event_jTable3MouseClicked
-    
-    private void abrirVentanaAlmacenes(String opcion) {
-        if (vAlmacenes.isShowing()) {
-            vAlmacenes.toFront();
-        } else {
-            vAlmacenes.setVisible(true);
-        }
-        
-        vAlmacenes.navegar(opcion);
-    }
-    
-    /**
-     * Valida que la ventana especificada se abra una sola vez
-     * @param ventana Ventana que se va a validar
-     */
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
-        }
-    }
     
     private void abrirDialog(JDialog modal) {
         if (modal.isShowing()) {
