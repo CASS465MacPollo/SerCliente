@@ -7,6 +7,7 @@ package front.secundarios;
 
 import front.FrmAlmacenes;
 import front.FrmPrincipalMostrador;
+import front.secundarios.almacenes.FrmCreacionClientes;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -20,20 +21,20 @@ import javax.swing.JFrame;
 public class FrmSerCliente extends javax.swing.JFrame {
 
     private FrmPrincipalMostrador vPrincipal;
-    private FrmAlmacenes vAlmacenes;
     private FrmOftasDsctos dOftasDsctos;
     private FrmDetPedido dDetPedido;
+    private FrmCreacionClientes dCreacionClientes;
     
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmSerCliente(FrmPrincipalMostrador vPrincipal, FrmAlmacenes vAlmacenes) {
+    public FrmSerCliente(FrmPrincipalMostrador vPrincipal) {
         initComponents();
         
         this.vPrincipal = vPrincipal;
-        this.vAlmacenes = vAlmacenes;
         dOftasDsctos = new FrmOftasDsctos(this, true);
         dDetPedido = new FrmDetPedido(this, true);
+        dCreacionClientes = new FrmCreacionClientes(this, true);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -1182,7 +1183,7 @@ public class FrmSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField87ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        validarVentanaAlmacenes("MaestroClientes");
+        abrirDialog(dCreacionClientes);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void tipoGestionPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipoGestionPanelMouseClicked
@@ -1196,7 +1197,7 @@ public class FrmSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tipoGestionPanelMouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        new FrmPedidos(vPrincipal, vAlmacenes).setVisible(true);
+        new FrmPedidos(vPrincipal).setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -1208,28 +1209,6 @@ public class FrmSerCliente extends javax.swing.JFrame {
             abrirDialog(dDetPedido);
         }
     }//GEN-LAST:event_jTable1MouseClicked
-    
-    private void validarVentanaAlmacenes(String opcion) {
-        if (vAlmacenes.isShowing()) {
-            vAlmacenes.toFront();
-        } else {
-            vAlmacenes.setVisible(true);
-        }
-        
-        vAlmacenes.navegar(opcion);
-    }
-    
-    /**
-     * Valida que la ventana especificada se abra una sola vez
-     * @param ventana Ventana que se va a validar
-     */
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
-        }
-    }
     
     private void abrirDialog(JDialog modal) {
         if (modal.isShowing()) {

@@ -6,6 +6,7 @@
 package front;
 
 import com.sun.glass.events.KeyEvent;
+import front.secundarios.FrmAcercaDe;
 import front.secundarios.FrmCupoEmpleado;
 import front.secundarios.FrmDetPedido;
 import front.secundarios.FrmRetomarGestion;
@@ -13,6 +14,18 @@ import front.secundarios.FrmNit;
 import front.secundarios.FrmOftasDsctos;
 import front.secundarios.FrmProcedimiento;
 import front.secundarios.FrmSerCliente;
+import front.secundarios.almacenes.FrmCambiarCu;
+import front.secundarios.almacenes.FrmClientesLlamarMT;
+import front.secundarios.almacenes.FrmClientesNoGestionados;
+import front.secundarios.almacenes.FrmConsultaClientes;
+import front.secundarios.almacenes.FrmConsultaEmpleados;
+import front.secundarios.almacenes.FrmCreacionClientes;
+import front.secundarios.almacenes.FrmDepuracionClientes;
+import front.secundarios.almacenes.FrmDescargaParametros;
+import front.secundarios.almacenes.FrmDiasNoVenta;
+import front.secundarios.almacenes.FrmPedVsFac;
+import front.secundarios.almacenes.FrmPedidosTransmitidos;
+import front.secundarios.almacenes.FrmSubirCampanias;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -34,7 +47,6 @@ import javax.swing.JTabbedPane;
 public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
-    private FrmAlmacenes vAlmacenes;
     private FrmNit dNit;
     private FrmSerCliente vSerCliente;
     private FrmOftasDsctos dOftasDsctos;
@@ -42,6 +54,18 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     private FrmRetomarGestion dRetomarGestion;
     private FrmProcedimiento dProcedimiento;
     private FrmDetPedido dDetPedido;
+    private FrmCreacionClientes dCreacionClientes;
+    private FrmDepuracionClientes dDepuracionClientes;
+    private FrmConsultaClientes dConsultaClientes;
+    private FrmClientesLlamarMT dClientesLlamarMT;
+    private FrmClientesNoGestionados dClientesNoGestionados;
+    private FrmCambiarCu dCambiarCu;
+    private FrmDiasNoVenta dDiasNoVenta;
+    private FrmPedidosTransmitidos dPedidosTransmitidos;
+    private FrmPedVsFac dPedVsFac;
+    private FrmConsultaEmpleados dConsultaEmpleados;
+    private FrmSubirCampanias dSubirCampanias;
+    private FrmDescargaParametros dDescargaParametros;
 
     /**
      * Creates new form VentanaMenu
@@ -49,14 +73,25 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     public FrmPrincipalMostrador() {
         initComponents();
 
-        vAlmacenes = new FrmAlmacenes();
         dNit = new FrmNit(this, true);
-        vSerCliente = new FrmSerCliente(this, vAlmacenes);
+        vSerCliente = new FrmSerCliente(this);
         dOftasDsctos = new FrmOftasDsctos(this, true);
         dCupoEmpleado = new FrmCupoEmpleado(this, true);
-        dRetomarGestion = new FrmRetomarGestion(this, true, vAlmacenes);
+        dRetomarGestion = new FrmRetomarGestion(this, true);
         dProcedimiento = new FrmProcedimiento(this, true);
         dDetPedido = new FrmDetPedido(this, true);
+        dCreacionClientes = new FrmCreacionClientes(this, true);
+        dDepuracionClientes = new FrmDepuracionClientes(this, true);
+        dConsultaClientes = new FrmConsultaClientes(this, true);
+        dClientesLlamarMT = new FrmClientesLlamarMT(this, true);
+        dClientesNoGestionados = new FrmClientesNoGestionados(this, true);
+        dCambiarCu = new FrmCambiarCu(this, true);
+        dDiasNoVenta = new FrmDiasNoVenta(this, true);
+        dPedidosTransmitidos = new FrmPedidosTransmitidos(this, true);
+        dPedVsFac = new FrmPedVsFac(this, true);
+        dConsultaEmpleados = new FrmConsultaEmpleados(this, true);
+        dSubirCampanias = new FrmSubirCampanias(this, true);
+        dDescargaParametros = new FrmDescargaParametros(this, true);
 
         ajustarComponentes();
     }
@@ -153,7 +188,23 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
         Icon almacenesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes.png").getImage());
         almacenesIconL.setIcon(almacenesIcon);
-
+        
+        //Iconos almacenes -> clientes
+        Icon creacionClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/CreacionClientes.png").getImage());
+        creacionClientesItem.setIcon(creacionClientesIcon);
+        
+        Icon depuracionClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/DepuracionClientes.png").getImage());
+        depuracionClientesItem.setIcon(depuracionClientesIcon);
+        
+        Icon consClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ConsultaClientes.png").getImage());
+        consClientesItem.setIcon(consClientesIcon);
+        
+        Icon llamarLuegoIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ClientesLlamarMasTarde.png").getImage());
+        llamarLuegoItem.setIcon(llamarLuegoIcon);
+        
+        Icon clientesNoGestionadosIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ClientesNoGestionados.png").getImage());
+        clientesNoGestionadosItem.setIcon(clientesNoGestionadosIcon);
+        
         //Icono Mac Cambio Clave
         ImageIcon imagenMacCambioClave = new ImageIcon("src/images/icons/Principal/MacPolloN1.png");
         Icon iconoMacCambioClave = new ImageIcon(imagenMacCambioClave.getImage().getScaledInstance(iconMacCambioClaveL.getWidth(), iconMacCambioClaveL.getHeight(), Image.SCALE_DEFAULT));
@@ -181,7 +232,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         salirItem = new javax.swing.JMenuItem();
         popupAlmacenes = new javax.swing.JPopupMenu();
         clientesMenu = new javax.swing.JMenu();
-        creacionClientes = new javax.swing.JMenuItem();
+        creacionClientesItem = new javax.swing.JMenuItem();
         depuracionClientesItem = new javax.swing.JMenuItem();
         consClientesItem = new javax.swing.JMenuItem();
         llamarLuegoItem = new javax.swing.JMenuItem();
@@ -706,13 +757,13 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
         clientesMenu.setText("Clientes");
 
-        creacionClientes.setText("Creación de Clientes");
-        creacionClientes.addActionListener(new java.awt.event.ActionListener() {
+        creacionClientesItem.setText("Creación de Clientes");
+        creacionClientesItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                creacionClientesActionPerformed(evt);
+                creacionClientesItemActionPerformed(evt);
             }
         });
-        clientesMenu.add(creacionClientes);
+        clientesMenu.add(creacionClientesItem);
 
         depuracionClientesItem.setText("Depuración de Clientes");
         depuracionClientesItem.addActionListener(new java.awt.event.ActionListener() {
@@ -1522,7 +1573,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         clientesTMPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         fechaCampaniaPanel1.setBackground(new java.awt.Color(245, 245, 245));
-        fechaCampaniaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Campaña", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        fechaCampaniaPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha de Campaña", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         fechaCampaniaTxt.setEditable(false);
         fechaCampaniaTxt.setBackground(new java.awt.Color(255, 255, 153));
@@ -1547,7 +1598,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         tipoMarcacionPanel1.setBackground(new java.awt.Color(245, 245, 245));
-        tipoMarcacionPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Marcación", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        tipoMarcacionPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Marcación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         tipoMarcacionTxt1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         tipoMarcacionTxt1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1669,7 +1720,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         });
 
         jPanel28.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Usuario", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jLabel5.setText("Pedidos Realizados");
@@ -1717,7 +1768,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel67.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consolidado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consolidado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTextField15.setBackground(new java.awt.Color(255, 255, 153));
         jTextField15.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
@@ -1765,7 +1816,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel69.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Llamar", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Por Llamar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jLabel29.setText("Por Usuario");
@@ -1907,7 +1958,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         callInPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel71.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton36.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton36.setText("WhatsApp");
@@ -1935,7 +1986,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel73.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel73.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel73.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton38.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton38.setText("Domicilio Mostrador");
@@ -1979,7 +2030,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel74.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel74.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel74.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton68.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton68.setText("Buscar Cliente");
@@ -2019,7 +2070,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel75.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel75.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel75.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel125.setText("Nombre");
 
@@ -2092,7 +2143,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel76.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel76.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel76.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel131.setText("Almacén");
 
@@ -2250,7 +2301,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel77.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel77.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel77.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable14.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2269,6 +2320,11 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        jTable14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable14MouseClicked(evt);
             }
         });
         jScrollPane20.setViewportView(jTable14);
@@ -2396,14 +2452,15 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
                     .addComponent(jScrollPane20)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel77Layout.createSequentialGroup()
                         .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox9)
+                            .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButton73, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton74, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton76, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton75, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel77Layout.createSequentialGroup()
-                                .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox9)
-                                    .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jButton75, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton73, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton74, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(18, 18, 18)
                                 .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel157)
                                     .addComponent(jLabel158)
@@ -2437,8 +2494,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
                                         .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel77Layout.createSequentialGroup()
-                                .addComponent(jButton76, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jButton71)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton72)))
@@ -2489,9 +2545,9 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton75)
+                        .addComponent(jButton76)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton76))
+                        .addComponent(jButton75))
                     .addGroup(jPanel77Layout.createSequentialGroup()
                         .addGroup(jPanel77Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel77Layout.createSequentialGroup()
@@ -2597,7 +2653,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         callInPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel78.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel78.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel78.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton41.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton41.setText("Llamada Entrante");
@@ -2625,7 +2681,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel79.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel79.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel79.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton42.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton42.setText("Domicilio Mostrador");
@@ -2653,13 +2709,23 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel80.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel80.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel80.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Cliente Identificado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton80.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton80.setText("Buscar Cliente");
+        jButton80.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton80ActionPerformed(evt);
+            }
+        });
 
         jButton81.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton81.setText("Crear Cliente");
+        jButton81.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton81ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
         jPanel80.setLayout(jPanel80Layout);
@@ -2683,7 +2749,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel83.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel83.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel83.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Domicilio Mostrador", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel160.setText("Nombre");
 
@@ -2756,7 +2822,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel88.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel88.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel88.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable15.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -3036,7 +3102,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel87.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel87.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel87.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Principales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel137.setText("Almacén");
 
@@ -3259,7 +3325,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel47.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -3283,7 +3349,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel48.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton21.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton21.setText("Todos");
@@ -3318,7 +3384,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel49.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton23.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton23.setText("Todos");
@@ -3608,7 +3674,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel53.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel54.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha Desde - Hasta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -3632,7 +3698,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel55.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Almacenes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton25.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton25.setText("Todos");
@@ -3667,7 +3733,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel56.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton27.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton27.setText("Todos");
@@ -3990,7 +4056,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel90.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel91.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel91.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel91.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
         jPanel91.setLayout(jPanel91Layout);
@@ -4128,7 +4194,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel92.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel93.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel93.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel93.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jLabel186.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel186.setText("Fecha de Campaña");
@@ -4154,7 +4220,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel94.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel94.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel94.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton44.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton44.setText("Histórico");
@@ -4189,7 +4255,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         );
 
         jPanel95.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel95.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campaña(s)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel95.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campaña(s)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton48.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton48.setText("Todos");
@@ -4267,7 +4333,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jButton96.setText("Ejecutar");
 
         jPanel96.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel96.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Punto(s) de Venta", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel96.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Punto(s) de Venta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton50.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton50.setText("Todos");
@@ -4698,7 +4764,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel66.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton34.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton34.setText("Campaña Hoy");
@@ -4927,7 +4993,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel81.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel82.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel82.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora", 0, 0, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
+        jPanel82.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Distribuidora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CmbAlmacen" }));
 
@@ -4952,7 +5018,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jButton77.setText("Limpiar");
 
         jPanel85.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel85.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel85.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton46.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton46.setText("Todos");
@@ -5108,7 +5174,15 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable27MouseClicked(evt);
@@ -5301,7 +5375,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         loginPanel.setBackground(new java.awt.Color(245, 245, 245));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         claveTxt.setText("aPasswordField1");
 
@@ -5663,56 +5737,71 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel101MouseClicked
 
     private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseClicked
-        //popupAlmacenes.show(evt.getComponent(), evt.getX(), evt.getY());
-        abrirVentanaSecundaria(vAlmacenes);
+        Component componente = evt.getComponent();
+        
+        popupAlmacenes.show(componente, almacenesL.getX(), componente.getY() + componente.getHeight() - 10);
+        //popupAlmacenes.show(componente, 470, 96);
+        //abrirVentanaSecundaria(vAlmacenes);
     }//GEN-LAST:event_jPanel15MouseClicked
 
-    private void creacionClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creacionClientesActionPerformed
+    private void creacionClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creacionClientesItemActionPerformed
         //navegar("Creación de Clientes", creacionClientesPanel);
-    }//GEN-LAST:event_creacionClientesActionPerformed
+        abrirDialog(dCreacionClientes);
+    }//GEN-LAST:event_creacionClientesItemActionPerformed
 
     private void depuracionClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depuracionClientesItemActionPerformed
         //navegar("Depuración de Clientes", depuracionClientesPanel);
+        abrirDialog(dDepuracionClientes);
     }//GEN-LAST:event_depuracionClientesItemActionPerformed
 
     private void consClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consClientesItemActionPerformed
         //navegar("Consulta de Clientes", consClientesPanel);
+        abrirDialog(dConsultaClientes);
     }//GEN-LAST:event_consClientesItemActionPerformed
 
     private void llamarLuegoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_llamarLuegoItemActionPerformed
         // navegar("Clientes Llamar más Tarde", llamarLuegoPanel);
+        abrirDialog(dClientesLlamarMT);
     }//GEN-LAST:event_llamarLuegoItemActionPerformed
 
     private void clientesNoGestionadosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesNoGestionadosItemActionPerformed
         //navegar("Clientes no Gestionados", clientesNoGestionadosPanel);
+        abrirDialog(dClientesNoGestionados);
     }//GEN-LAST:event_clientesNoGestionadosItemActionPerformed
 
     private void cmbCUOperadorItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCUOperadorItemActionPerformed
         //navegar("Cambiar Centro de Utilidad del Operador", cambiarCUOperadorPanel);
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_cmbCUOperadorItemActionPerformed
 
     private void diasNoVentaItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasNoVentaItemActionPerformed
         // navegar("Días NO Venta", diasNoVentaPanel);
+        abrirDialog(dDiasNoVenta);
     }//GEN-LAST:event_diasNoVentaItemActionPerformed
 
     private void pedTransmitidosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedTransmitidosItemActionPerformed
         // navegar("Pedidos Transmitidos", pedTransmitidosPanel);
+        abrirDialog(dPedidosTransmitidos);
     }//GEN-LAST:event_pedTransmitidosItemActionPerformed
 
     private void pedVsFacItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedVsFacItemActionPerformed
         // navegar("Pedidos VS Facturados", pedVsFacPanel);
+        abrirDialog(dPedVsFac);
     }//GEN-LAST:event_pedVsFacItemActionPerformed
 
     private void consEmpleadosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consEmpleadosItemActionPerformed
         //navegar("Consulta Empleados", consEmpleadosPanel);
+        abrirDialog(dConsultaEmpleados);
     }//GEN-LAST:event_consEmpleadosItemActionPerformed
 
     private void subirCampaniasItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subirCampaniasItemActionPerformed
         //navegar("Subir Archivo Campañas", subirCampaniaPanel);
+        abrirDialog(dSubirCampanias);
     }//GEN-LAST:event_subirCampaniasItemActionPerformed
 
     private void descargaParametrosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descargaParametrosItemActionPerformed
         //navegar("Descargar Parámetros", descargaParametrosPanel);
+        abrirDialog(dDescargaParametros);
     }//GEN-LAST:event_descargaParametrosItemActionPerformed
 
     private void aceptarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarBtnActionPerformed
@@ -5776,7 +5865,6 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_soporteItemActionPerformed
 
     private void salirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirItemActionPerformed
-        vAlmacenes.dispose();
         vSerCliente.dispose();
 
         this.dispose();
@@ -5820,7 +5908,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
-        abrirVentanaAlmacenes("MaestroClientes");
+        //abrirVentanaAlmacenes("MaestroClientes");
+        abrirDialog(dCreacionClientes);
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
@@ -5828,7 +5917,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
-        abrirVentanaAlmacenes("PedidosTransmitidos");
+        //abrirVentanaAlmacenes("PedidosTransmitidos");
+        abrirDialog(dPedidosTransmitidos);
     }//GEN-LAST:event_jButton73ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
@@ -5840,7 +5930,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton88ActionPerformed
 
     private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
-        abrirVentanaAlmacenes("PedidosTransmitidos");
+        //abrirVentanaAlmacenes("PedidosTransmitidos");
+        abrirDialog(dPedidosTransmitidos);
     }//GEN-LAST:event_jButton87ActionPerformed
 
     private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
@@ -5852,7 +5943,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-        abrirVentanaAlmacenes("SubirArchivoCampanias");
+        //abrirVentanaAlmacenes("SubirArchivoCampanias");
+        abrirDialog(dSubirCampanias);
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
@@ -5860,7 +5952,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        abrirVentanaAlmacenes("CambiarCuOperador");
+        //abrirVentanaAlmacenes("CambiarCuOperador");
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
@@ -5868,7 +5961,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton37ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-        abrirVentanaAlmacenes("CambiarCuOperador");
+        //abrirVentanaAlmacenes("CambiarCuOperador");
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton92ActionPerformed
@@ -5876,7 +5970,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton92ActionPerformed
 
     private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
-        abrirVentanaAlmacenes("CambiarCuOperador");
+        //abrirVentanaAlmacenes("CambiarCuOperador");
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_jButton91ActionPerformed
 
     private void jButton104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton104ActionPerformed
@@ -5885,7 +5980,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton103ActionPerformed
         //Subir plano my
-        abrirVentanaAlmacenes("SubirArchivoCampanias");
+        //abrirVentanaAlmacenes("SubirArchivoCampanias");
+        abrirDialog(dSubirCampanias);
     }//GEN-LAST:event_jButton103ActionPerformed
 
     private void jButton102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton102ActionPerformed
@@ -5894,7 +5990,8 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton101ActionPerformed
         //Procesos especiales -> Mayoreo -> cambiar zona del operador
-        abrirVentanaAlmacenes("CambiarCuOperador");
+        //abrirVentanaAlmacenes("CambiarCuOperador");
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_jButton101ActionPerformed
 
     private void jTable24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable24MouseClicked
@@ -5908,11 +6005,13 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton63ActionPerformed
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
-        abrirVentanaAlmacenes("CambiarCuOperador");
+        //abrirVentanaAlmacenes("CambiarCuOperador");
+        abrirDialog(dCambiarCu);
     }//GEN-LAST:event_jButton62ActionPerformed
 
     private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
-        abrirVentanaAlmacenes("SubirArchivoCampanias");
+        //abrirVentanaAlmacenes("SubirArchivoCampanias");
+        
     }//GEN-LAST:event_jButton64ActionPerformed
 
     private void jButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton65ActionPerformed
@@ -5929,22 +6028,24 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         navegar("Pedidos InBound", pedInPanel);
     }//GEN-LAST:event_jButton85ActionPerformed
 
+    private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton80ActionPerformed
+        abrirDialog(dNit);
+    }//GEN-LAST:event_jButton80ActionPerformed
+
+    private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
+        abrirDialog(dCreacionClientes);
+    }//GEN-LAST:event_jButton81ActionPerformed
+
+    private void jTable14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable14MouseClicked
+        
+    }//GEN-LAST:event_jTable14MouseClicked
+
     public void navegar(String titulo, Component componente) {
         if (opciones2Pane.isAncestorOf(componente)) {
             opciones2Pane.setSelectedComponent(componente);
         } else {
             opciones2Pane.setSelectedComponent(opciones2Pane.add(titulo, componente));
         }
-    }
-
-    private void abrirVentanaAlmacenes(String opcion) {
-        if (vAlmacenes.isShowing()) {
-            vAlmacenes.toFront();
-        } else {
-            vAlmacenes.setVisible(true);
-        }
-
-        vAlmacenes.navegar(opcion);
     }
 
     private void abrirVentanaSecundaria(JFrame ventana) {
@@ -5996,7 +6097,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     private javax.swing.JPanel consCampaniasPanel;
     private javax.swing.JMenuItem consClientesItem;
     private javax.swing.JMenuItem consEmpleadosItem;
-    private javax.swing.JMenuItem creacionClientes;
+    private javax.swing.JMenuItem creacionClientesItem;
     private javax.swing.JButton crearClienteBtn1;
     private javax.swing.JMenuItem depuracionClientesItem;
     private javax.swing.JMenuItem descargaParametrosItem;
