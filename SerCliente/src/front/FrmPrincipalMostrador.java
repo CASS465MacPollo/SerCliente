@@ -74,7 +74,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         initComponents();
 
         dNit = new FrmNit(this, true);
-        vSerCliente = new FrmSerCliente(this);
+        vSerCliente = new FrmSerCliente(this, true);
         dOftasDsctos = new FrmOftasDsctos(this, true);
         dCupoEmpleado = new FrmCupoEmpleado(this, true);
         dRetomarGestion = new FrmRetomarGestion(this, true);
@@ -5746,62 +5746,62 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void creacionClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creacionClientesItemActionPerformed
         //navegar("Creación de Clientes", creacionClientesPanel);
-        abrirDialog(dCreacionClientes);
+        new FrmCreacionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_creacionClientesItemActionPerformed
 
     private void depuracionClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depuracionClientesItemActionPerformed
         //navegar("Depuración de Clientes", depuracionClientesPanel);
-        abrirDialog(dDepuracionClientes);
+        new FrmDepuracionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_depuracionClientesItemActionPerformed
 
     private void consClientesItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consClientesItemActionPerformed
         //navegar("Consulta de Clientes", consClientesPanel);
-        abrirDialog(dConsultaClientes);
+        new FrmConsultaClientes(this, true).setVisible(true);
     }//GEN-LAST:event_consClientesItemActionPerformed
 
     private void llamarLuegoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_llamarLuegoItemActionPerformed
         // navegar("Clientes Llamar más Tarde", llamarLuegoPanel);
-        abrirDialog(dClientesLlamarMT);
+        new FrmClientesLlamarMT(this, true).setVisible(true);
     }//GEN-LAST:event_llamarLuegoItemActionPerformed
 
     private void clientesNoGestionadosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesNoGestionadosItemActionPerformed
         //navegar("Clientes no Gestionados", clientesNoGestionadosPanel);
-        abrirDialog(dClientesNoGestionados);
+        new FrmClientesNoGestionados(this, true).setVisible(true);
     }//GEN-LAST:event_clientesNoGestionadosItemActionPerformed
 
     private void cmbCUOperadorItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCUOperadorItemActionPerformed
         //navegar("Cambiar Centro de Utilidad del Operador", cambiarCUOperadorPanel);
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_cmbCUOperadorItemActionPerformed
 
     private void diasNoVentaItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasNoVentaItemActionPerformed
         // navegar("Días NO Venta", diasNoVentaPanel);
-        abrirDialog(dDiasNoVenta);
+        new FrmDiasNoVenta(this, true).setVisible(true);
     }//GEN-LAST:event_diasNoVentaItemActionPerformed
 
     private void pedTransmitidosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedTransmitidosItemActionPerformed
         // navegar("Pedidos Transmitidos", pedTransmitidosPanel);
-        abrirDialog(dPedidosTransmitidos);
+        new FrmPedidosTransmitidos(this, true).setVisible(true);
     }//GEN-LAST:event_pedTransmitidosItemActionPerformed
 
     private void pedVsFacItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedVsFacItemActionPerformed
         // navegar("Pedidos VS Facturados", pedVsFacPanel);
-        abrirDialog(dPedVsFac);
+        new FrmPedVsFac(this, true).setVisible(true);
     }//GEN-LAST:event_pedVsFacItemActionPerformed
 
     private void consEmpleadosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consEmpleadosItemActionPerformed
         //navegar("Consulta Empleados", consEmpleadosPanel);
-        abrirDialog(dConsultaEmpleados);
+        new FrmConsultaEmpleados(this, true).setVisible(true);
     }//GEN-LAST:event_consEmpleadosItemActionPerformed
 
     private void subirCampaniasItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subirCampaniasItemActionPerformed
         //navegar("Subir Archivo Campañas", subirCampaniaPanel);
-        abrirDialog(dSubirCampanias);
+        new FrmSubirCampanias(this, true).setVisible(true);
     }//GEN-LAST:event_subirCampaniasItemActionPerformed
 
     private void descargaParametrosItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descargaParametrosItemActionPerformed
         //navegar("Descargar Parámetros", descargaParametrosPanel);
-        abrirDialog(dDescargaParametros);
+        new FrmDescargaParametros(this, true).setVisible(true);
     }//GEN-LAST:event_descargaParametrosItemActionPerformed
 
     private void aceptarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarBtnActionPerformed
@@ -5825,7 +5825,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField171ActionPerformed
 
     private void jButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton76ActionPerformed
-        abrirDialog(dCupoEmpleado);
+        new FrmCupoEmpleado(this, true).setVisible(true);
     }//GEN-LAST:event_jButton76ActionPerformed
 
     private void jTextField146ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField146ActionPerformed
@@ -5849,7 +5849,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelarLlamadaBtn1ActionPerformed
 
     private void retomarGestionBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retomarGestionBtn1ActionPerformed
-        abrirDialog(dRetomarGestion);
+        new FrmRetomarGestion(this, true).setVisible(true);
     }//GEN-LAST:event_retomarGestionBtn1ActionPerformed
 
     private void acercaDeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeItemActionPerformed
@@ -5876,49 +5876,49 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField176ActionPerformed
 
     private void crearClienteBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearClienteBtn1ActionPerformed
-        abrirDialog(dNit);
+        new FrmNit(this, true).setVisible(true);
     }//GEN-LAST:event_crearClienteBtn1ActionPerformed
 
     private void clientesPorLlamarTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirVentanaSecundaria(vSerCliente);
+            new FrmSerCliente(this, true).setVisible(true);
         }
     }//GEN-LAST:event_clientesPorLlamarTable1MouseClicked
 
     private void clientesPorLlamarTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            abrirVentanaSecundaria(vSerCliente);
+            new FrmSerCliente(this, true).setVisible(true);
         }
     }//GEN-LAST:event_clientesPorLlamarTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            abrirVentanaSecundaria(vSerCliente);
+            new FrmSerCliente(this, true).setVisible(true);
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirVentanaSecundaria(vSerCliente);
+            new FrmSerCliente(this, true).setVisible(true);
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1MouseClicked
 
     private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
-        abrirDialog(dNit);
+        new FrmNit(this, true).setVisible(true);
     }//GEN-LAST:event_jButton68ActionPerformed
 
     private void jButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton69ActionPerformed
         //abrirVentanaAlmacenes("MaestroClientes");
-        abrirDialog(dCreacionClientes);
+        new FrmCreacionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_jButton69ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
-        abrirDialog(dOftasDsctos);
+        new FrmOftasDsctos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton73ActionPerformed
         //abrirVentanaAlmacenes("PedidosTransmitidos");
-        abrirDialog(dPedidosTransmitidos);
+        new FrmPedidosTransmitidos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton73ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
@@ -5926,12 +5926,12 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton88ActionPerformed
-        abrirDialog(dOftasDsctos);
+        new FrmOftasDsctos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton88ActionPerformed
 
     private void jButton87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton87ActionPerformed
         //abrirVentanaAlmacenes("PedidosTransmitidos");
-        abrirDialog(dPedidosTransmitidos);
+        new FrmPedidosTransmitidos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton87ActionPerformed
 
     private void jButton89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton89ActionPerformed
@@ -5944,7 +5944,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         //abrirVentanaAlmacenes("SubirArchivoCampanias");
-        abrirDialog(dSubirCampanias);
+        new FrmSubirCampanias(this, true).setVisible(true);
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
@@ -5953,7 +5953,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         //abrirVentanaAlmacenes("CambiarCuOperador");
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
@@ -5962,7 +5962,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         //abrirVentanaAlmacenes("CambiarCuOperador");
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton92ActionPerformed
@@ -5971,7 +5971,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton91ActionPerformed
         //abrirVentanaAlmacenes("CambiarCuOperador");
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_jButton91ActionPerformed
 
     private void jButton104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton104ActionPerformed
@@ -5981,7 +5981,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     private void jButton103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton103ActionPerformed
         //Subir plano my
         //abrirVentanaAlmacenes("SubirArchivoCampanias");
-        abrirDialog(dSubirCampanias);
+        new FrmSubirCampanias(this, true).setVisible(true);
     }//GEN-LAST:event_jButton103ActionPerformed
 
     private void jButton102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton102ActionPerformed
@@ -5991,12 +5991,12 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     private void jButton101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton101ActionPerformed
         //Procesos especiales -> Mayoreo -> cambiar zona del operador
         //abrirVentanaAlmacenes("CambiarCuOperador");
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_jButton101ActionPerformed
 
     private void jTable24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable24MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirDialog(dProcedimiento);
+            new FrmProcedimiento(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable24MouseClicked
 
@@ -6006,7 +6006,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton62ActionPerformed
         //abrirVentanaAlmacenes("CambiarCuOperador");
-        abrirDialog(dCambiarCu);
+        new FrmCambiarCu(this, true).setVisible(true);
     }//GEN-LAST:event_jButton62ActionPerformed
 
     private void jButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton64ActionPerformed
@@ -6020,7 +6020,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jTable27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable27MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirDialog(dDetPedido);
+            new FrmDetPedido(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable27MouseClicked
 
@@ -6029,11 +6029,11 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton85ActionPerformed
 
     private void jButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton80ActionPerformed
-        abrirDialog(dNit);
+        new FrmNit(this, true).setVisible(true);
     }//GEN-LAST:event_jButton80ActionPerformed
 
     private void jButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton81ActionPerformed
-        abrirDialog(dCreacionClientes);
+        new FrmCreacionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_jButton81ActionPerformed
 
     private void jTable14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable14MouseClicked
@@ -6047,23 +6047,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             opciones2Pane.setSelectedComponent(opciones2Pane.add(titulo, componente));
         }
     }
-
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
-        }
-    }
     
-    private void abrirDialog(JDialog modal) {
-        if (modal.isShowing()) {
-            modal.toFront();
-        } else {
-            modal.setVisible(true);
-        }
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptarBtn;
     private javax.swing.JMenuItem acercaDeItem;

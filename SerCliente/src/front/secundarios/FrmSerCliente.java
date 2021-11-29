@@ -18,7 +18,7 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class FrmSerCliente extends javax.swing.JFrame {
+public class FrmSerCliente extends javax.swing.JDialog {
 
     private FrmPrincipalMostrador vPrincipal;
     private FrmOftasDsctos dOftasDsctos;
@@ -28,14 +28,19 @@ public class FrmSerCliente extends javax.swing.JFrame {
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmSerCliente(FrmPrincipalMostrador vPrincipal) {
+    public FrmSerCliente(java.awt.Frame parent, boolean modal) {
         initComponents();
         
-        this.vPrincipal = vPrincipal;
-        dOftasDsctos = new FrmOftasDsctos(this, true);
-        dDetPedido = new FrmDetPedido(this, true);
-        dCreacionClientes = new FrmCreacionClientes(this, true);
+        ajustarComponentes();
+    }
+    
+    public FrmSerCliente(java.awt.Dialog parent, boolean modal) {
+        initComponents();
         
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
@@ -1183,7 +1188,7 @@ public class FrmSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField87ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        abrirDialog(dCreacionClientes);
+        new FrmCreacionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void tipoGestionPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipoGestionPanelMouseClicked
@@ -1201,22 +1206,14 @@ public class FrmSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        abrirDialog(dOftasDsctos);
+        new FrmOftasDsctos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirDialog(dDetPedido);
+            new FrmDetPedido(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable1MouseClicked
-    
-    private void abrirDialog(JDialog modal) {
-        if (modal.isShowing()) {
-            modal.toFront();
-        } else {
-            modal.setVisible(true);
-        }
-    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton12;

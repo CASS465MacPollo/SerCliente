@@ -17,10 +17,21 @@ public class FrmCreacionClientes extends javax.swing.JDialog {
     /**
      * Creates new form VentanaDetPedido
      */
+    public FrmCreacionClientes(java.awt.Dialog parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        
+        ajustarComponentes();
+    }
+    
     public FrmCreacionClientes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         

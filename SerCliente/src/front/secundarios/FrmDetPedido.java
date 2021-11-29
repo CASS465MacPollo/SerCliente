@@ -21,6 +21,17 @@ public class FrmDetPedido extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
+        ajustarComponentes();
+    }
+    
+    public FrmDetPedido(java.awt.Dialog parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         

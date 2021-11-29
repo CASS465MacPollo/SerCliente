@@ -28,7 +28,6 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         initComponents();
         
         this.vPrincipal = (FrmPrincipalMostrador) parent;
-        vSerCliente = new FrmSerCliente(vPrincipal);
         
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
@@ -261,7 +260,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
             this.dispose();
-            abrirVentanaSecundaria(vSerCliente);
+            new FrmSerCliente(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable1MouseClicked
 

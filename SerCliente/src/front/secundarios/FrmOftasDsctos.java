@@ -20,10 +20,21 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
     /**
      * Creates new form VentanaSerCliente
      */
+    public FrmOftasDsctos(java.awt.Dialog parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        
+        ajustarComponentes();
+    }
+    
     public FrmOftasDsctos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
         //Icono del frame
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         

@@ -450,7 +450,7 @@ public class FrmPedidosTransmitidos extends javax.swing.JDialog {
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
         if (evt.getClickCount() == 2) {
-            new FrmDetPedido(new JFrame(), true).setVisible(true);
+            new FrmDetPedido(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable2MouseClicked
 
