@@ -21,7 +21,11 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -47,7 +51,6 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
-        jLabel64 = new javax.swing.JLabel();
         jScrollPane16 = new javax.swing.JScrollPane();
         jTable10 = new javax.swing.JTable();
         jButton30 = new javax.swing.JButton();
@@ -72,7 +75,10 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jTextField62 = new javax.swing.JTextField();
         jComboBox38 = new javax.swing.JComboBox<>();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Depuración de Clientes");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -96,8 +102,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jButton27.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton27.setText("Activar");
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel64.setText("Clientes");
+        jScrollPane16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable10.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,7 +121,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jButton30.setText("Consultar");
 
         jPanel54.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton48.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton48.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -163,7 +168,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         );
 
         jPanel55.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Categoria de Precio", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Categoria de Precio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton53.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton53.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -201,7 +206,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         );
 
         jPanel56.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ordenar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel56.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ordenar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton52.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -247,7 +252,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         );
 
         jPanel57.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel57.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel57.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel63.setText("Código Cliente");
@@ -298,10 +303,6 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel40Layout.createSequentialGroup()
-                .addGap(662, 662, 662)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -332,14 +333,12 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
                 .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel40Layout.createSequentialGroup()
                         .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, 77, Short.MAX_VALUE)
                             .addComponent(jPanel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel64)
-                .addGap(4, 4, 4)
+                .addGap(24, 24, 24)
                 .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -403,7 +402,6 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> jComboBox36;
     private javax.swing.JComboBox<String> jComboBox38;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel40;

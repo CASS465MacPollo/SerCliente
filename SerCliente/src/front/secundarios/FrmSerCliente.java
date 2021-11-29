@@ -29,6 +29,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
      * Creates new form VentanaSerCliente
      */
     public FrmSerCliente(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         
         ajustarComponentes();
@@ -41,7 +42,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
     }
     
     private void ajustarComponentes() {
-        //Icono del frame
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -161,6 +162,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Servicio al Cliente");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -183,7 +185,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         jLabel61.setText("Teléfonos");
 
         jPanel51.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frecuencia de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton28.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -235,7 +237,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         );
 
         jPanel52.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Día de Compra", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jCheckBox21.setBackground(new java.awt.Color(245, 245, 245));
         jCheckBox21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -547,7 +549,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         );
 
         jPanel49.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
@@ -668,7 +670,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         );
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -744,7 +746,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         jScrollPane2.setViewportView(jTextArea1);
 
         tipoGestionPanel.setBackground(new java.awt.Color(129, 218, 87));
-        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tipoGestionPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tipoGestionPanelMouseClicked(evt);
@@ -910,7 +912,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
         });
 
         jScrollPane40.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane40.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestión del Cliente en Último Mes"));
+        jScrollPane40.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestión del Cliente en Último Mes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable34.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1202,7 +1204,7 @@ public class FrmSerCliente extends javax.swing.JDialog {
     }//GEN-LAST:event_tipoGestionPanelMouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        new FrmPedidos(vPrincipal).setVisible(true);
+        new FrmPedidos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed

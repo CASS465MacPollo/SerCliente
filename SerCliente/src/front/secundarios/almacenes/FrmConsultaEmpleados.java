@@ -21,7 +21,11 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -60,7 +64,6 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
         jRadioButton9 = new javax.swing.JRadioButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
         jPanel110 = new javax.swing.JPanel();
         jLabel183 = new javax.swing.JLabel();
         jTextField171 = new javax.swing.JTextField();
@@ -69,7 +72,10 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Consulta de Empleados");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -196,6 +202,8 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -208,9 +216,6 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
             }
         ));
         jScrollPane3.setViewportView(jTable3);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Ventas");
 
         jPanel110.setBackground(new java.awt.Color(245, 245, 245));
         jPanel110.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14))); // NOI18N
@@ -265,16 +270,11 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
         jPanel108Layout.setHorizontalGroup(
             jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel108Layout.createSequentialGroup()
-                .addGroup(jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel108Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel109, javax.swing.GroupLayout.PREFERRED_SIZE, 1099, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane3)
-                            .addComponent(jPanel110, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel108Layout.createSequentialGroup()
-                        .addGap(528, 528, 528)
-                        .addComponent(jLabel3)))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel108Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel109, javax.swing.GroupLayout.PREFERRED_SIZE, 1099, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3)
+                    .addComponent(jPanel110, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
         jPanel108Layout.setVerticalGroup(
@@ -282,9 +282,7 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
             .addGroup(jPanel108Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jPanel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -348,7 +346,6 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel184;
     private javax.swing.JLabel jLabel185;
     private javax.swing.JLabel jLabel186;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel108;
     private javax.swing.JPanel jPanel109;

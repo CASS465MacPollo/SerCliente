@@ -21,7 +21,11 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -53,7 +57,6 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
         jComboBox16 = new javax.swing.JComboBox<>();
         jComboBox14 = new javax.swing.JComboBox<>();
         jComboBox19 = new javax.swing.JComboBox<>();
-        jLabel124 = new javax.swing.JLabel();
         jScrollPane41 = new javax.swing.JScrollPane();
         jTable35 = new javax.swing.JTable();
         jPanel63 = new javax.swing.JPanel();
@@ -61,7 +64,10 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
         jButton20 = new javax.swing.JButton();
         jCheckBox7 = new javax.swing.JCheckBox();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Clientes No Gestionados");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -77,7 +83,7 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
         jPanel69.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel70.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel70.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel70.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gestión", " " }));
 
@@ -145,8 +151,7 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel124.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel124.setText("Clientes que Faltan por Gestión");
+        jScrollPane41.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes que Faltan por Gestión", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable35.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -162,7 +167,7 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
         jScrollPane41.setViewportView(jTable35);
 
         jPanel63.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel63.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel63.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton9.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton9.setText("Exportar");
@@ -204,8 +209,6 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
                 .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel69Layout.createSequentialGroup()
                         .addComponent(jCheckBox7)
-                        .addGap(561, 561, 561)
-                        .addComponent(jLabel124)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel69Layout.createSequentialGroup()
                         .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -224,12 +227,10 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
                     .addComponent(jPanel63, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(10, 10, 10)
-                .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel124)
-                    .addComponent(jCheckBox7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane41, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -285,7 +286,6 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> jComboBox14;
     private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JPanel jPanel1;

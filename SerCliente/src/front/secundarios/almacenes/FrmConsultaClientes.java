@@ -21,7 +21,11 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -44,7 +48,6 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         salirBtn = new javax.swing.JButton();
         jPanel41 = new javax.swing.JPanel();
-        jLabel66 = new javax.swing.JLabel();
         jScrollPane17 = new javax.swing.JScrollPane();
         jTable11 = new javax.swing.JTable();
         jPanel58 = new javax.swing.JPanel();
@@ -58,7 +61,10 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jLabel77 = new javax.swing.JLabel();
         jTextField65 = new javax.swing.JTextField();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Consulta de Clientes");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -73,8 +79,7 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jPanel41.setBackground(new java.awt.Color(245, 245, 245));
         jPanel41.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel66.setText("Clientes");
+        jScrollPane17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable11.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,7 +95,7 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jScrollPane17.setViewportView(jTable11);
 
         jPanel58.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel58.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel58.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton58.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -122,7 +127,7 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         );
 
         jPanel67.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel67.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar por", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel67.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel67.setText("NIT");
@@ -179,18 +184,13 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jPanel41Layout.setHorizontalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel41Layout.createSequentialGroup()
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addGap(662, 662, 662)
-                        .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane17, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel41Layout.createSequentialGroup()
-                                .addComponent(jPanel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(jPanel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel41Layout.setVerticalGroup(
@@ -201,8 +201,6 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
                     .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel67, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel66)
-                .addGap(4, 4, 4)
                 .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(67, 67, 67))
         );
@@ -254,7 +252,6 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField64ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;

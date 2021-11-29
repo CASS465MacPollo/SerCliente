@@ -24,7 +24,11 @@ public class FrmSubirCampanias extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -59,7 +63,10 @@ public class FrmSubirCampanias extends javax.swing.JDialog {
         jDateChooser7 = new com.toedter.calendar.JDateChooser();
         jButton21 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Subir Campañas");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 

@@ -21,7 +21,11 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -62,9 +66,11 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
         jButton113 = new javax.swing.JButton();
         jScrollPane18 = new javax.swing.JScrollPane();
         jTable12 = new javax.swing.JTable();
-        jLabel161 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Días de No Venta");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -181,6 +187,8 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
         jButton113.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton113.setText("Borrar");
 
+        jScrollPane18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Call Center Días No Laborables", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+
         jTable12.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -193,9 +201,6 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
             }
         ));
         jScrollPane18.setViewportView(jTable12);
-
-        jLabel161.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel161.setText("Call Center Días No Laborables");
 
         javax.swing.GroupLayout jPanel101Layout = new javax.swing.GroupLayout(jPanel101);
         jPanel101.setLayout(jPanel101Layout);
@@ -214,19 +219,13 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
                             .addContainerGap()
                             .addComponent(jPanel103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel101Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel161)
-                .addGap(253, 253, 253))
         );
         jPanel101Layout.setVerticalGroup(
             jPanel101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel101Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel161)
-                .addGap(4, 4, 4)
+                .addGap(36, 36, 36)
                 .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel101Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -286,7 +285,6 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel160;
-    private javax.swing.JLabel jLabel161;
     private javax.swing.JLabel jLabel165;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel101;

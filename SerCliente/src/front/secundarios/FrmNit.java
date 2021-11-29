@@ -21,13 +21,18 @@ public class FrmNit extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
         setLocationRelativeTo(null);
         
-        Icon salirIcon = new ImageIcon(new ImageIcon("src/images/Salir.png").getImage());
+        //Salir
+        Icon salirIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Salir.png").getImage());
         salirBtn.setIcon(salirIcon);
     }
 
@@ -56,8 +61,10 @@ public class FrmNit extends javax.swing.JDialog {
         jTable1 = new javax.swing.JTable();
         salirBtn = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Nit");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -65,7 +72,7 @@ public class FrmNit extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel14.setText("Nit");
@@ -83,7 +90,7 @@ public class FrmNit extends javax.swing.JDialog {
         jLabel17.setText("Teléfono");
 
         jPanel71.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado del Cliente", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel71.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado del Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton36.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton36.setText("Activo");

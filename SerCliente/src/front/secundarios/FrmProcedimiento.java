@@ -4,6 +4,9 @@
  */
 package front.secundarios;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Oficina
@@ -16,6 +19,20 @@ public class FrmProcedimiento extends javax.swing.JDialog {
     public FrmProcedimiento(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
+        this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
+        
+        //Centrar ventana en pantalla
+        setLocationRelativeTo(null);
+        
+        //Salir
+        Icon salirIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Salir.png").getImage());
+        salirBtn.setIcon(salirIcon);
     }
 
     /**
@@ -37,9 +54,12 @@ public class FrmProcedimiento extends javax.swing.JDialog {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel159 = new javax.swing.JLabel();
+        salirBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Procedimiento");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -67,6 +87,14 @@ public class FrmProcedimiento extends javax.swing.JDialog {
         jLabel159.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel159.setText("Descripción del Procedimiento");
 
+        salirBtn.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        salirBtn.setText("  Salir");
+        salirBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -93,6 +121,10 @@ public class FrmProcedimiento extends javax.swing.JDialog {
                                     .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel157))))
                         .addContainerGap())))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(301, 301, 301)
+                .addComponent(salirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +147,9 @@ public class FrmProcedimiento extends javax.swing.JDialog {
                         .addComponent(jLabel157)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(salirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,7 +160,7 @@ public class FrmProcedimiento extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -135,6 +169,10 @@ public class FrmProcedimiento extends javax.swing.JDialog {
     private void jTextField89ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField89ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField89ActionPerformed
+
+    private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_salirBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel157;
@@ -147,5 +185,6 @@ public class FrmProcedimiento extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField89;
+    private javax.swing.JButton salirBtn;
     // End of variables declaration//GEN-END:variables
 }

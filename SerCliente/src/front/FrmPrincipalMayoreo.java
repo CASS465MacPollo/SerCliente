@@ -5032,7 +5032,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
     }//GEN-LAST:event_retomarGestionBtn1ActionPerformed
 
     private void acercaDeItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeItemActionPerformed
-        new FrmAcercaDe().setVisible(true);
+        new FrmAcercaDe(this, true).setVisible(true);
     }//GEN-LAST:event_acercaDeItemActionPerformed
 
     private void cambioClaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambioClaveItemActionPerformed

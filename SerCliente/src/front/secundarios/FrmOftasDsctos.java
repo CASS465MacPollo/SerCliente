@@ -35,7 +35,7 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
     }
     
     private void ajustarComponentes() {
-        //Icono del frame
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -70,9 +70,10 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
         jRadioButton36 = new javax.swing.JRadioButton();
         jRadioButton37 = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Servicio al Cliente");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Ofertas y Descuentos");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -80,7 +81,7 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel51.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Categoria de Precio", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Categoria de Precio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jRadioButton28.setBackground(new java.awt.Color(245, 245, 245));
         jRadioButton28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -116,7 +117,7 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
         );
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ofertas de Productos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ofertas de Productos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -151,7 +152,7 @@ public class FrmOftasDsctos extends javax.swing.JDialog {
         });
 
         jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descuentos de Pedidos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descuentos de Pedidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

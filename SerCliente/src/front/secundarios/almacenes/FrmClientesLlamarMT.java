@@ -21,7 +21,11 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -55,18 +59,19 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         jLabel17 = new javax.swing.JLabel();
         jComboBox15 = new javax.swing.JComboBox<>();
         jDateChooser8 = new com.toedter.calendar.JDateChooser();
-        jLabel123 = new javax.swing.JLabel();
         jScrollPane39 = new javax.swing.JScrollPane();
         jTable33 = new javax.swing.JTable();
         jScrollPane40 = new javax.swing.JScrollPane();
         jTable34 = new javax.swing.JTable();
-        jLabel139 = new javax.swing.JLabel();
         jPanel59 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Clientes por Llamar Más Tarde");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -82,7 +87,7 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         jPanel66.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jPanel68.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel68.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Almacén1", "Almacén2", "Almacén3", "Almacén4" }));
 
@@ -161,8 +166,7 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel123.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel123.setText("Clientes Llamar Mas Tarde");
+        jScrollPane39.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes Llamar Mas Tarde", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable33.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -177,6 +181,8 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         ));
         jScrollPane39.setViewportView(jTable33);
 
+        jScrollPane40.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resumen por Televendedor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
+
         jTable34.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -190,11 +196,8 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         ));
         jScrollPane40.setViewportView(jTable34);
 
-        jLabel139.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel139.setText("Resumen por Televendedor");
-
         jPanel59.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel59.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Exportar Datos", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel59.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Exportar Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jButton2.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton2.setText("Detallado");
@@ -231,32 +234,21 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
         jPanel66Layout.setHorizontalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel66Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel66Layout.createSequentialGroup()
+                        .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton4))
+                    .addComponent(jScrollPane39))
                 .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel66Layout.createSequentialGroup()
-                        .addGap(595, 595, 595)
-                        .addComponent(jLabel123))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane40, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel66Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel66Layout.createSequentialGroup()
-                                .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton4))
-                            .addComponent(jScrollPane39))))
-                .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel66Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel139)
-                        .addGap(163, 163, 163))
-                    .addGroup(jPanel66Layout.createSequentialGroup()
-                        .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel66Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane40, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel66Layout.createSequentialGroup()
-                                .addGap(96, 96, 96)
-                                .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(24, Short.MAX_VALUE))))
+                        .addGap(96, 96, 96)
+                        .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel66Layout.setVerticalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,11 +262,7 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
                         .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(14, 14, 14)
-                .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel123)
-                    .addComponent(jLabel139))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane40)
                     .addComponent(jScrollPane39))
@@ -334,9 +322,7 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> jComboBox11;
     private javax.swing.JComboBox<String> jComboBox15;
     private com.toedter.calendar.JDateChooser jDateChooser8;
-    private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;

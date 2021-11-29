@@ -22,7 +22,7 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class FrmPedidos extends javax.swing.JFrame {
+public class FrmPedidos extends javax.swing.JDialog {
 
     private FrmPrincipalMostrador vPrincipal;
     private FrmOftasDsctos dOftasDsctos;
@@ -32,15 +32,15 @@ public class FrmPedidos extends javax.swing.JFrame {
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmPedidos(FrmPrincipalMostrador vPrincipal) {
+    public FrmPedidos(java.awt.Dialog parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         
-        this.vPrincipal = vPrincipal;
-        dOftasDsctos = new FrmOftasDsctos(this, true);
-        dDetPedido = new FrmDetPedido(this, true);
-        dCreacionClientes = new FrmCreacionClientes(this, true);
-        
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -136,9 +136,10 @@ public class FrmPedidos extends javax.swing.JFrame {
         jTextField90 = new javax.swing.JTextField();
         jButton25 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Pedidos");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -318,7 +319,7 @@ public class FrmPedidos extends javax.swing.JFrame {
         );
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -447,7 +448,7 @@ public class FrmPedidos extends javax.swing.JFrame {
         });
 
         tipoGestionPanel.setBackground(new java.awt.Color(129, 218, 87));
-        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        tipoGestionPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tipoGestionPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tipoGestionPanelMouseClicked(evt);
@@ -650,7 +651,7 @@ public class FrmPedidos extends javax.swing.JFrame {
         );
 
         jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "???", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "???", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -674,7 +675,7 @@ public class FrmPedidos extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable2);
 
         jScrollPane4.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transmisión de Pedidos (Días Anteriores)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

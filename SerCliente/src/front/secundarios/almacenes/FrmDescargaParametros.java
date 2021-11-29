@@ -21,7 +21,11 @@ public class FrmDescargaParametros extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        //Icono del frame
+        ajustarComponentes();
+    }
+    
+    private void ajustarComponentes() {
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -57,7 +61,10 @@ public class FrmDescargaParametros extends javax.swing.JDialog {
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Descarga Parámetros");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 

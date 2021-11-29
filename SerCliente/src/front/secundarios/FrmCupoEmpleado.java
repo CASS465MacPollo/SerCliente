@@ -6,6 +6,7 @@
 package front.secundarios;
 
 import front.FrmPrincipalMostrador;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,6 +20,9 @@ public class FrmCupoEmpleado extends javax.swing.JDialog {
     public FrmCupoEmpleado(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        //Icono del dialog
+        this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
         setLocationRelativeTo(null);
@@ -40,12 +44,14 @@ public class FrmCupoEmpleado extends javax.swing.JDialog {
         salirBtn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cupo Empleado");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         cupoEmpleadoPanel.setBackground(new java.awt.Color(245, 245, 245));
-        cupoEmpleadoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cupo Empleado", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        cupoEmpleadoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cupo Empleado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel56.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

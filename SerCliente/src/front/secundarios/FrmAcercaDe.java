@@ -13,17 +13,18 @@ import javax.swing.ImageIcon;
  *
  * @author cass465
  */
-public class FrmAcercaDe extends javax.swing.JFrame {
+public class FrmAcercaDe extends javax.swing.JDialog {
     
     String callSeleccionado;
 
     /**
      * Creates new form NewJFrame
      */
-    public FrmAcercaDe() {
+    public FrmAcercaDe(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
 
-        //Icono del frame
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla

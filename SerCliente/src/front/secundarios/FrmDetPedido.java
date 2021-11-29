@@ -32,7 +32,7 @@ public class FrmDetPedido extends javax.swing.JDialog {
     }
     
     private void ajustarComponentes() {
-        //Icono del frame
+        //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
         
         //Centrar ventana en pantalla
@@ -104,12 +104,15 @@ public class FrmDetPedido extends javax.swing.JDialog {
         jTable2 = new javax.swing.JTable();
         salirBtn = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Detalle Pedido");
         setBackground(new java.awt.Color(245, 245, 245));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(245, 245, 245));
 
         jPanel51.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel59.setText("Pedido");
@@ -222,7 +225,7 @@ public class FrmDetPedido extends javax.swing.JDialog {
         );
 
         jScrollPane4.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle del Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle del Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -246,7 +249,7 @@ public class FrmDetPedido extends javax.swing.JDialog {
         jScrollPane4.setViewportView(jTable3);
 
         jScrollPane1.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle de la Factura", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle de la Factura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -523,10 +526,10 @@ public class FrmDetPedido extends javax.swing.JDialog {
         );
 
         jPanel4.setBackground(new java.awt.Color(245, 245, 245));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Seguimiento Pedido", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Seguimiento Pedido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jScrollPane2.setBackground(new java.awt.Color(245, 245, 245));
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle de la Factura", 0, 0, new java.awt.Font("Arial", 2, 14))); // NOI18N
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalle de la Factura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
