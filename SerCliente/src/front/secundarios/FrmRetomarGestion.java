@@ -4,30 +4,21 @@
  */
 package front.secundarios;
 
-import front.FrmAlmacenes;
-import front.FrmPrincipalMostrador;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 
 /**
  *
  * @author Oficina
  */
 public class FrmRetomarGestion extends javax.swing.JDialog {
-    
-    private FrmPrincipalMostrador vPrincipal;
-    private FrmAlmacenes vAlmacenes;
-    private FrmSerCliente vSerCliente;
-    
+
     /**
      * Creates new form DialogRetomarGestion
      */
     public FrmRetomarGestion(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
-        this.vPrincipal = (FrmPrincipalMostrador) parent;
         
         ajustarComponentes();
     }
@@ -275,14 +266,6 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
 
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
-        }
-    }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton22;
     private javax.swing.JComboBox<String> jComboBox11;

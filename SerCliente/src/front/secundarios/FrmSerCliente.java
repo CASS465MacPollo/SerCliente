@@ -5,25 +5,17 @@
  */
 package front.secundarios;
 
-import front.FrmAlmacenes;
 import front.FrmPrincipalMostrador;
 import front.secundarios.almacenes.FrmCreacionClientes;
 import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 /**
  *
  * @author Oficina
  */
 public class FrmSerCliente extends javax.swing.JDialog {
-
-    private FrmPrincipalMostrador vPrincipal;
-    private FrmOftasDsctos dOftasDsctos;
-    private FrmDetPedido dDetPedido;
-    private FrmCreacionClientes dCreacionClientes;
     
     /**
      * Creates new form VentanaSerCliente

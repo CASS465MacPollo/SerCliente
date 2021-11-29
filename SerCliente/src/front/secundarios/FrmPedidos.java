@@ -5,18 +5,11 @@
  */
 package front.secundarios;
 
-import front.FrmAlmacenes;
-import front.FrmPrincipalMostrador;
 import front.secundarios.almacenes.FrmCreacionClientes;
 import java.awt.Color;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 /**
  *
@@ -24,11 +17,6 @@ import javax.swing.JFrame;
  */
 public class FrmPedidos extends javax.swing.JDialog {
 
-    private FrmPrincipalMostrador vPrincipal;
-    private FrmOftasDsctos dOftasDsctos;
-    private FrmDetPedido dDetPedido;
-    private FrmCreacionClientes dCreacionClientes;
-    
     /**
      * Creates new form VentanaSerCliente
      */
@@ -957,7 +945,7 @@ public class FrmPedidos extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField86ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        abrirDialog(dCreacionClientes);
+        new FrmCreacionClientes(this, true).setVisible(true);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jTextField88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField88ActionPerformed
@@ -977,7 +965,7 @@ public class FrmPedidos extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField89ActionPerformed
 
     private void jTextField90ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField90ActionPerformed
-        abrirDialog(dOftasDsctos);
+        new FrmOftasDsctos(this, true).setVisible(true);
     }//GEN-LAST:event_jTextField90ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
@@ -991,23 +979,15 @@ public class FrmPedidos extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        abrirDialog(dOftasDsctos);
+        new FrmOftasDsctos(this, true).setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirDialog(dDetPedido);
+            new FrmDetPedido(this, true).setVisible(true);
         }
     }//GEN-LAST:event_jTable3MouseClicked
-    
-    private void abrirDialog(JDialog modal) {
-        if (modal.isShowing()) {
-            modal.toFront();
-        } else {
-            modal.setVisible(true);
-        }
-    }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton17;

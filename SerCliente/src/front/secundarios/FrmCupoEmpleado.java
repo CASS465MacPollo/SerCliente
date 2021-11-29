@@ -5,7 +5,6 @@
  */
 package front.secundarios;
 
-import front.FrmPrincipalMostrador;
 import javax.swing.ImageIcon;
 
 /**

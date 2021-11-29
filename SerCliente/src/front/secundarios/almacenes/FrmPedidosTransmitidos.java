@@ -8,7 +8,6 @@ package front.secundarios.almacenes;
 import front.secundarios.FrmDetPedido;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 
 /**
  *

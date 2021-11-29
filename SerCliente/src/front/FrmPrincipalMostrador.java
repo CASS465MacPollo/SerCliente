@@ -36,9 +36,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -49,51 +46,12 @@ import javax.swing.JTabbedPane;
 public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
-    private FrmNit dNit;
-    private FrmSerCliente vSerCliente;
-    private FrmOftasDsctos dOftasDsctos;
-    private FrmCupoEmpleado dCupoEmpleado;
-    private FrmRetomarGestion dRetomarGestion;
-    private FrmProcedimiento dProcedimiento;
-    private FrmDetPedido dDetPedido;
-    private FrmCreacionClientes dCreacionClientes;
-    private FrmDepuracionClientes dDepuracionClientes;
-    private FrmConsultaClientes dConsultaClientes;
-    private FrmClientesLlamarMT dClientesLlamarMT;
-    private FrmClientesNoGestionados dClientesNoGestionados;
-    private FrmCambiarCu dCambiarCu;
-    private FrmDiasNoVenta dDiasNoVenta;
-    private FrmPedidosTransmitidos dPedidosTransmitidos;
-    private FrmPedVsFac dPedVsFac;
-    private FrmConsultaEmpleados dConsultaEmpleados;
-    private FrmSubirCampanias dSubirCampanias;
-    private FrmDescargaParametros dDescargaParametros;
-
+    
     /**
      * Creates new form VentanaMenu
      */
     public FrmPrincipalMostrador() {
         initComponents();
-
-        dNit = new FrmNit(this, true);
-        vSerCliente = new FrmSerCliente(this, true);
-        dOftasDsctos = new FrmOftasDsctos(this, true);
-        dCupoEmpleado = new FrmCupoEmpleado(this, true);
-        dRetomarGestion = new FrmRetomarGestion(this, true);
-        dProcedimiento = new FrmProcedimiento(this, true);
-        dDetPedido = new FrmDetPedido(this, true);
-        dCreacionClientes = new FrmCreacionClientes(this, true);
-        dDepuracionClientes = new FrmDepuracionClientes(this, true);
-        dConsultaClientes = new FrmConsultaClientes(this, true);
-        dClientesLlamarMT = new FrmClientesLlamarMT(this, true);
-        dClientesNoGestionados = new FrmClientesNoGestionados(this, true);
-        dCambiarCu = new FrmCambiarCu(this, true);
-        dDiasNoVenta = new FrmDiasNoVenta(this, true);
-        dPedidosTransmitidos = new FrmPedidosTransmitidos(this, true);
-        dPedVsFac = new FrmPedVsFac(this, true);
-        dConsultaEmpleados = new FrmConsultaEmpleados(this, true);
-        dSubirCampanias = new FrmSubirCampanias(this, true);
-        dDescargaParametros = new FrmDescargaParametros(this, true);
 
         ajustarComponentes();
     }
@@ -5541,8 +5499,6 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_soporteItemActionPerformed
 
     private void salirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirItemActionPerformed
-        vSerCliente.dispose();
-
         this.dispose();
         new FrmCall().setVisible(true);
     }//GEN-LAST:event_salirItemActionPerformed
