@@ -6,6 +6,7 @@ package front.secundarios;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -13,6 +14,8 @@ import javax.swing.ImageIcon;
  */
 public class FrmRetomarGestion extends javax.swing.JDialog {
 
+    private FrmSerCliente vSerCliente;
+    
     /**
      * Creates new form DialogRetomarGestion
      */
@@ -20,6 +23,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
+        vSerCliente = new FrmSerCliente((JFrame) parent);
         ajustarComponentes();
     }
     
@@ -258,7 +262,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
             this.dispose();
-            new FrmSerCliente(this, true).setVisible(true);
+            abrirVentanaSecundaria(vSerCliente);
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -266,6 +270,14 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
 
+    private void abrirVentanaSecundaria(JFrame ventana) {
+        if (ventana.isShowing()) {
+            ventana.toFront();
+        } else {
+            ventana.setVisible(true);
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton22;
     private javax.swing.JComboBox<String> jComboBox11;

@@ -20,7 +20,7 @@ public class FrmPedidos extends javax.swing.JDialog {
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmPedidos(java.awt.Dialog parent, boolean modal) {
+    public FrmPedidos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         

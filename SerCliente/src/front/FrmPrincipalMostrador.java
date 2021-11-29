@@ -36,6 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -46,6 +47,7 @@ import javax.swing.JTabbedPane;
 public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
+    private FrmSerCliente vSerCliente;
     
     /**
      * Creates new form VentanaMenu
@@ -53,6 +55,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     public FrmPrincipalMostrador() {
         initComponents();
 
+        vSerCliente = new FrmSerCliente(this);
         ajustarComponentes();
     }
 
@@ -5513,25 +5516,29 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void clientesPorLlamarTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            new FrmSerCliente(this, true).setVisible(true);
+            if (!vSerCliente.isShowing()) {
+                abrirVentanaSecundaria(vSerCliente);
+            } else {
+                /////////////////////////option pane "termine de gestionar la que tiene"
+            }
         }
     }//GEN-LAST:event_clientesPorLlamarTable1MouseClicked
 
     private void clientesPorLlamarTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            new FrmSerCliente(this, true).setVisible(true);
+            abrirVentanaSecundaria(vSerCliente);
         }
     }//GEN-LAST:event_clientesPorLlamarTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            new FrmSerCliente(this, true).setVisible(true);
+            abrirVentanaSecundaria(vSerCliente);
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            new FrmSerCliente(this, true).setVisible(true);
+            abrirVentanaSecundaria(vSerCliente);
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1MouseClicked
 
@@ -5677,6 +5684,14 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             opciones2Pane.setSelectedComponent(componente);
         } else {
             opciones2Pane.setSelectedComponent(opciones2Pane.add(titulo, componente));
+        }
+    }
+    
+    private void abrirVentanaSecundaria(JFrame ventana) {
+        if (ventana.isShowing()) {
+            ventana.toFront();
+        } else {
+            ventana.setVisible(true);
         }
     }
     
