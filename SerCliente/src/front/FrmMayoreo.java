@@ -769,7 +769,7 @@ public class FrmMayoreo extends javax.swing.JFrame {
         try {
             javax.swing.UIManager.setLookAndFeel(look);
         } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(FrmAlmacenes.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
 

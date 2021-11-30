@@ -5,6 +5,7 @@
 package front.secundarios;
 
 import com.sun.glass.events.KeyEvent;
+import front.FrmPrincipalMayoreo;
 import front.FrmPrincipalMostrador;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -17,7 +18,8 @@ import javax.swing.JOptionPane;
  */
 public class FrmRetomarGestion extends javax.swing.JDialog {
 
-    private FrmPrincipalMostrador vPrincipal;
+    private FrmPrincipalMostrador vMostrador;
+    private FrmPrincipalMayoreo vMayoreo;
     
     /**
      * Creates new form DialogRetomarGestion
@@ -26,7 +28,12 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        vPrincipal = (FrmPrincipalMostrador) parent;
+        if (parent instanceof FrmPrincipalMostrador) {
+            vMostrador = (FrmPrincipalMostrador) parent;
+        } else {
+            vMayoreo = (FrmPrincipalMayoreo) parent;
+        }
+        
         ajustarComponentes();
     }
     
@@ -270,7 +277,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
             this.dispose();
-            vPrincipal.abrirVentanaSerCliente();
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -281,10 +288,18 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             this.dispose();
-            vPrincipal.abrirVentanaSerCliente();
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_jTable1KeyPressed
 
+    private void abrirVentanaSerCliente() {
+        if (vMostrador != null) {
+            vMostrador.abrirVentanaSerCliente();
+        } else {
+            vMayoreo.abrirVentanaSerCliente();
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton22;
     private javax.swing.JComboBox<String> jComboBox11;

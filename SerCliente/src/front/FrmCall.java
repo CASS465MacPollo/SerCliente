@@ -11,13 +11,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author cass465
+ * Ventana Principal main que contiene la seleccion del tipo de Call Center
+ * 
+ * @author Camilo Sanabria
  */
 public class FrmCall extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Crear un nuevo FrmCall
      */
     public FrmCall() {
         initComponents();

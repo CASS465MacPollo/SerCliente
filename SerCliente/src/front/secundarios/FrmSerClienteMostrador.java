@@ -20,7 +20,7 @@ import javax.swing.JFrame;
  *
  * @author Oficina
  */
-public class FrmSerCliente extends javax.swing.JFrame {
+public class FrmSerClienteMostrador extends javax.swing.JFrame {
 
     private FrmPrincipalMostrador vPrincipal;
     private FrmPedidos vPedidos;
@@ -28,7 +28,7 @@ public class FrmSerCliente extends javax.swing.JFrame {
     /**
      * Creates new form VentanaSerCliente
      */
-    public FrmSerCliente(JFrame vPrincipal) {
+    public FrmSerClienteMostrador(JFrame vPrincipal) {
         initComponents();
 
         this.vPrincipal = (FrmPrincipalMostrador) vPrincipal;

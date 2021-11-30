@@ -14,7 +14,7 @@ import front.secundarios.FrmRetomarGestion;
 import front.secundarios.FrmNit;
 import front.secundarios.FrmOftasDsctos;
 import front.secundarios.FrmProcedimiento;
-import front.secundarios.FrmSerCliente;
+import front.secundarios.FrmSerClienteMostrador;
 import front.secundarios.FrmSoporteTecnico;
 import front.secundarios.almacenes.FrmCambiarCu;
 import front.secundarios.almacenes.FrmClientesLlamarMT;
@@ -48,7 +48,7 @@ import javax.swing.JTabbedPane;
 public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
-    private FrmSerCliente vSerCliente;
+    private FrmSerClienteMostrador vSerCliente;
 
     /**
      * Creates new form VentanaMenu
@@ -56,7 +56,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     public FrmPrincipalMostrador() {
         initComponents();
 
-        vSerCliente = new FrmSerCliente(this);
+        vSerCliente = new FrmSerClienteMostrador(this);
         ajustarComponentes();
     }
 
@@ -6182,7 +6182,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         return estadisticasPanel;
     }
 
-    public FrmSerCliente getVSerCliente() {
+    public FrmSerClienteMostrador getVSerCliente() {
         return vSerCliente;
     }
 }
