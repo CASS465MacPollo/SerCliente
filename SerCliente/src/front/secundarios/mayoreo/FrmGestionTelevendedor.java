@@ -5,6 +5,7 @@
  */
 package front.secundarios.mayoreo;
 
+import front.secundarios.FrmClientesMayoreo;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -61,7 +62,7 @@ public class FrmGestionTelevendedor extends javax.swing.JDialog {
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Días de No Venta");
+        setTitle("Gestión del Televendedor");
         setBackground(new java.awt.Color(245, 245, 245));
         setResizable(false);
 
@@ -103,6 +104,11 @@ public class FrmGestionTelevendedor extends javax.swing.JDialog {
 
         jButton22.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton22.setText("Generar");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel113Layout = new javax.swing.GroupLayout(jPanel113);
         jPanel113.setLayout(jPanel113Layout);
@@ -206,6 +212,10 @@ public class FrmGestionTelevendedor extends javax.swing.JDialog {
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
         this.dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        new FrmClientesMayoreo(this, true).setVisible(true);
+    }//GEN-LAST:event_jButton22ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton116;

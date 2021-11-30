@@ -58,7 +58,7 @@ public class FrmSoporteTecnico extends javax.swing.JDialog {
         jLabel222 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cambio de Clave");
+        setTitle("Soporte Técnico");
         setBackground(new java.awt.Color(245, 245, 245));
         setResizable(false);
 

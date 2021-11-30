@@ -5683,15 +5683,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             opciones2Pane.setSelectedComponent(opciones2Pane.add(titulo, componente));
         }
     }
-
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
-        }
-    }
-
+    
     public void abrirVentanaSerCliente() {
         if (!vSerCliente.isShowing()) {
             vSerCliente.setVisible(true);
