@@ -24,6 +24,13 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         ajustarComponentes();
     }
     
+    public FrmConsultaClientes(java.awt.Dialog parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+        
+        ajustarComponentes();
+    }
+    
     private void ajustarComponentes() {
         //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());

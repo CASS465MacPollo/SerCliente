@@ -37,6 +37,7 @@ import java.util.Date;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -48,7 +49,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private Dimension dimension;
     private FrmSerCliente vSerCliente;
-    
+
     /**
      * Creates new form VentanaMenu
      */
@@ -151,48 +152,48 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
         Icon almacenesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes.png").getImage());
         almacenesIconL.setIcon(almacenesIcon);
-        
+
         //Iconos almacenes
         Icon clientesMenuIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes.png").getImage());
         clientesMenu.setIcon(clientesMenuIcon);
-        
+
         Icon cmbCUOperadorIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/CambiarCU.png").getImage());
         cmbCUOperadorItem.setIcon(cmbCUOperadorIcon);
-        
+
         Icon diasNoVentaIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/DiasNoVenta.png").getImage());
         diasNoVentaItem.setIcon(diasNoVentaIcon);
-        
+
         Icon pedTransmitidosIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/PedidosTransmitidos.png").getImage());
         pedTransmitidosItem.setIcon(pedTransmitidosIcon);
-        
+
         Icon pedVsFacIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/PedVsFac.png").getImage());
         pedVsFacItem.setIcon(pedVsFacIcon);
-        
+
         Icon consEmpleadosIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/ConsultaEmpleados.png").getImage());
         consEmpleadosItem.setIcon(consEmpleadosIcon);
-        
+
         Icon subirCampaniasIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/SubirArchivo.png").getImage());
         subirCampaniasItem.setIcon(subirCampaniasIcon);
-        
+
         Icon descargaParametrosIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/DescargarParametros.png").getImage());
         descargaParametrosItem.setIcon(descargaParametrosIcon);
-        
+
         //Iconos almacenes -> clientes
         Icon creacionClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/CreacionClientes.png").getImage());
         creacionClientesItem.setIcon(creacionClientesIcon);
-        
+
         Icon depuracionClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/DepuracionClientes.png").getImage());
         depuracionClientesItem.setIcon(depuracionClientesIcon);
-        
+
         Icon consClientesIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ConsultaClientes.png").getImage());
         consClientesItem.setIcon(consClientesIcon);
-        
+
         Icon llamarLuegoIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ClientesLlamarMasTarde.png").getImage());
         llamarLuegoItem.setIcon(llamarLuegoIcon);
-        
+
         Icon clientesNoGestionadosIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Clientes/ClientesNoGestionados.png").getImage());
         clientesNoGestionadosItem.setIcon(clientesNoGestionadosIcon);
-        
+
         //
         opciones2Pane.removeAll();
         opciones2Pane.add("Inicio", inicioPanel);
@@ -5379,7 +5380,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void jPanel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseClicked
         Component componente = evt.getComponent();
-        
+
         popupAlmacenes.show(componente, almacenesL.getX(), componente.getY() + componente.getHeight() - 10);
         //popupAlmacenes.show(componente, 470, 96);
         //abrirVentanaSecundaria(vAlmacenes);
@@ -5516,29 +5517,25 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
 
     private void clientesPorLlamarTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            if (!vSerCliente.isShowing()) {
-                abrirVentanaSecundaria(vSerCliente);
-            } else {
-                /////////////////////////option pane "termine de gestionar la que tiene"
-            }
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_clientesPorLlamarTable1MouseClicked
 
     private void clientesPorLlamarTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesPorLlamarTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            abrirVentanaSecundaria(vSerCliente);
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_clientesPorLlamarTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            abrirVentanaSecundaria(vSerCliente);
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1KeyPressed
 
     private void clientesLlamarMasTardeTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientesLlamarMasTardeTable1MouseClicked
         if (evt.getClickCount() == 2) {
-            abrirVentanaSecundaria(vSerCliente);
+            abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_clientesLlamarMasTardeTable1MouseClicked
 
@@ -5676,7 +5673,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton81ActionPerformed
 
     private void jTable14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable14MouseClicked
-        
+
     }//GEN-LAST:event_jTable14MouseClicked
 
     public void navegar(String titulo, Component componente) {
@@ -5686,7 +5683,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             opciones2Pane.setSelectedComponent(opciones2Pane.add(titulo, componente));
         }
     }
-    
+
     private void abrirVentanaSecundaria(JFrame ventana) {
         if (ventana.isShowing()) {
             ventana.toFront();
@@ -5694,7 +5691,15 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
             ventana.setVisible(true);
         }
     }
-    
+
+    public void abrirVentanaSerCliente() {
+        if (!vSerCliente.isShowing()) {
+            vSerCliente.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Tiene una gestión abierta, por favor termínela antes de abrir una nueva gestión", "Mensaje del Sistema", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem acercaDeItem;
     private javax.swing.JLabel almacenesIconL;
@@ -6177,4 +6182,7 @@ public class FrmPrincipalMostrador extends javax.swing.JFrame {
         return estadisticasPanel;
     }
 
+    public FrmSerCliente getVSerCliente() {
+        return vSerCliente;
+    }
 }

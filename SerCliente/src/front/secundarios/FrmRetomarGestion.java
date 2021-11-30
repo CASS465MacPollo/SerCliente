@@ -4,9 +4,12 @@
  */
 package front.secundarios;
 
+import com.sun.glass.events.KeyEvent;
+import front.FrmPrincipalMostrador;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,7 +17,7 @@ import javax.swing.JFrame;
  */
 public class FrmRetomarGestion extends javax.swing.JDialog {
 
-    private FrmSerCliente vSerCliente;
+    private FrmPrincipalMostrador vPrincipal;
     
     /**
      * Creates new form DialogRetomarGestion
@@ -23,7 +26,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        vSerCliente = new FrmSerCliente((JFrame) parent);
+        vPrincipal = (FrmPrincipalMostrador) parent;
         ajustarComponentes();
     }
     
@@ -187,6 +190,11 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
                 jTable1MouseClicked(evt);
             }
         });
+        jTable1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTable1KeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         salirBtn.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
@@ -262,7 +270,7 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         if (evt.getClickCount() == 2) {
             this.dispose();
-            abrirVentanaSecundaria(vSerCliente);
+            vPrincipal.abrirVentanaSerCliente();
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -270,14 +278,13 @@ public class FrmRetomarGestion extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
 
-    private void abrirVentanaSecundaria(JFrame ventana) {
-        if (ventana.isShowing()) {
-            ventana.toFront();
-        } else {
-            ventana.setVisible(true);
+    private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.dispose();
+            vPrincipal.abrirVentanaSerCliente();
         }
-    }
-    
+    }//GEN-LAST:event_jTable1KeyPressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton22;
     private javax.swing.JComboBox<String> jComboBox11;

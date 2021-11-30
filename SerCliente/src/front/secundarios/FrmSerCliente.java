@@ -21,26 +21,29 @@ import javax.swing.JFrame;
  * @author Oficina
  */
 public class FrmSerCliente extends javax.swing.JFrame {
-    
+
     private FrmPrincipalMostrador vPrincipal;
-    
+    private FrmPedidos vPedidos;
+
     /**
      * Creates new form VentanaSerCliente
      */
     public FrmSerCliente(JFrame vPrincipal) {
         initComponents();
-        
+
         this.vPrincipal = (FrmPrincipalMostrador) vPrincipal;
+        vPedidos = new FrmPedidos(vPrincipal);
+
         ajustarComponentes();
     }
-    
+
     private void ajustarComponentes() {
         //Icono del dialog
         this.setIconImage(new ImageIcon("src/images/icons/Principal/MacPolloIcon.png").getImage());
-        
+
         //Centrar ventana en pantalla
         setLocationRelativeTo(null);
-        
+
         //Salir
         Icon salirIcon = new ImageIcon(new ImageIcon("src/images/icons/Menu/Procesos Especiales/Almacenes/Salir.png").getImage());
         salirBtn.setIcon(salirIcon);
@@ -1270,7 +1273,11 @@ public class FrmSerCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tipoGestionPanelMouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        new FrmPedidos(this, true).setVisible(true);
+        if (!vPedidos.isShowing()) {
+            vPedidos.setVisible(true);
+        } else {
+            vPedidos.toFront();
+        }
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -1308,7 +1315,7 @@ public class FrmSerCliente extends javax.swing.JFrame {
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         new FrmPedVsFac(this, true).setVisible(true);
     }//GEN-LAST:event_jButton24ActionPerformed
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
