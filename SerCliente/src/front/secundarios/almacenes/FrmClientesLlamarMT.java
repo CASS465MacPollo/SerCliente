@@ -166,6 +166,7 @@ public class FrmClientesLlamarMT extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jScrollPane39.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane39.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes Llamar Mas Tarde", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable33.setModel(new javax.swing.table.DefaultTableModel(

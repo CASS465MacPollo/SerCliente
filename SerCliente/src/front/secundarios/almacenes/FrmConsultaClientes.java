@@ -86,6 +86,7 @@ public class FrmConsultaClientes extends javax.swing.JDialog {
         jPanel41.setBackground(new java.awt.Color(245, 245, 245));
         jPanel41.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        jScrollPane17.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable11.setModel(new javax.swing.table.DefaultTableModel(

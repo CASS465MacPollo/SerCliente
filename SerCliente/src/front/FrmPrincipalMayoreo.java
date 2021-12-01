@@ -1400,6 +1400,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane5.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes Pendientes Por Llamar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         clientesPorLlamarTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -1433,6 +1434,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(clientesPorLlamarTable1);
 
+        jScrollPane7.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes Por Llamar Más Tarde", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         clientesLlamarMasTardeTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -2814,6 +2816,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("Gestión Por Centro De Utilidad", jPanel52);
 
+        jScrollPane29.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestión Por Indicadores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable23.setModel(new javax.swing.table.DefaultTableModel(
@@ -3138,6 +3141,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
 
         jTabbedPane4.addTab("Gestión Por Centro De Utilidad", jPanel59);
 
+        jScrollPane35.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane35.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pedidos Por Categoría", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable29.setModel(new javax.swing.table.DefaultTableModel(
@@ -3156,6 +3160,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
         jButton38.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton38.setText("Consultar");
 
+        jScrollPane36.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane36.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestión Por Indicadores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable30.setModel(new javax.swing.table.DefaultTableModel(
@@ -3383,6 +3388,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane41.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane41.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestión Por Hora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable35.setModel(new javax.swing.table.DefaultTableModel(
@@ -3844,6 +3850,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane39.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane39.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informe Guacamaya", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable33.setModel(new javax.swing.table.DefaultTableModel(
@@ -3862,6 +3869,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
         jButton105.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton105.setText("Consultar");
 
+        jScrollPane40.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane40.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informe Televendeor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable34.setModel(new javax.swing.table.DefaultTableModel(
@@ -4205,6 +4213,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane27.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane27.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas Día Siguiente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable21.setModel(new javax.swing.table.DefaultTableModel(
@@ -4223,6 +4232,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
         jButton67.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton67.setText("Consultar");
 
+        jScrollPane28.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campañas Día Siguiente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable22.setModel(new javax.swing.table.DefaultTableModel(
@@ -4481,6 +4491,7 @@ public class FrmPrincipalMayoreo extends javax.swing.JFrame {
         jPanel86.setBackground(new java.awt.Color(245, 245, 245));
         jPanel86.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
+        jScrollPane33.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane33.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pedidos Virtuales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable27.setModel(new javax.swing.table.DefaultTableModel(

@@ -151,6 +151,7 @@ public class FrmClientesNoGestionados extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jScrollPane41.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane41.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes que Faltan por Gestión", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable35.setModel(new javax.swing.table.DefaultTableModel(

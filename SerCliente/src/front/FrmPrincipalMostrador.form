@@ -1585,6 +1585,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane5">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Clientes Pendientes Por Llamar">
@@ -1676,6 +1679,9 @@
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane7">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Clientes Por Llamar M&#xe1;s Tarde">
@@ -2099,7 +2105,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                           <Component id="callInPanel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="149" max="32767" attributes="0"/>
+                          <EmptySpace pref="136" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2155,7 +2161,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="jPanel76" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jPanel77" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="13" max="32767" attributes="0"/>
                           </Group>
@@ -2502,7 +2508,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel131" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -2515,18 +2521,14 @@
                                           <Component id="jLabel145" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
                                           <Component id="jDateChooser4" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Component id="jLabel146" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jSpinField1" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jSpinField2" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="deH" min="-2" pref="60" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel147" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jSpinField3" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jSpinField4" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="deH1" min="-2" pref="60" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel135" min="-2" max="-2" attributes="0"/>
@@ -2546,13 +2548,13 @@
                                           <Component id="jTextField132" min="-2" pref="205" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jTextField133" min="-2" pref="26" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                           <Component id="jLabel148" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Component id="jTextField137" min="-2" pref="107" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2580,7 +2582,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                           <Component id="jLabel145" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel146" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel146" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                           <Component id="jLabel131" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2589,13 +2591,10 @@
                                           <Component id="jTextField125" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jDateChooser4" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField1" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel147" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deH" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deH1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2729,13 +2728,29 @@
                         </Component>
                         <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser4">
                         </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField1">
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="deH">
+                          <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                                <TitledBorder/>
+                              </Border>
+                            </Property>
+                            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                            <Property name="showIcon" type="boolean" value="true"/>
+                            <Property name="showSeconds" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField2">
-                        </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField3">
-                        </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField4">
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="deH1">
+                          <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                                <TitledBorder/>
+                              </Border>
+                            </Property>
+                            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                            <Property name="showIcon" type="boolean" value="true"/>
+                            <Property name="showSeconds" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -3336,10 +3351,10 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                              <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3355,9 +3370,9 @@
                                       <Component id="jPanel79" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel88" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="13" max="32767" attributes="0"/>
                           </Group>
@@ -4161,7 +4176,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel137" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -4169,49 +4184,45 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel139" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField159" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="jTextField158" min="-2" pref="140" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jLabel191" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel170" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
                                           <Component id="jDateChooser5" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jLabel192" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Component id="jLabel171" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="deH4" min="-2" pref="60" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jSpinField5" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jSpinField6" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="jLabel172" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel193" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jSpinField7" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="jSpinField8" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="deH5" min="-2" pref="60" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel140" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextField174" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <Component id="jTextField159" min="-2" pref="80" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField175" min="-2" pref="29" max="-2" attributes="0"/>
+                                          <Component id="jTextField160" min="-2" pref="29" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField176" min="-2" pref="217" max="-2" attributes="0"/>
+                                          <Component id="jTextField161" min="-2" pref="217" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                           <Component id="jLabel141" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField177" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="jTextField162" min="-2" pref="40" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel142" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField178" min="-2" pref="205" max="-2" attributes="0"/>
+                                          <Component id="jTextField174" min="-2" pref="205" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField179" min="-2" pref="26" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jLabel194" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField175" min="-2" pref="26" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Component id="jLabel184" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Component id="jTextField180" min="-2" pref="107" max="-2" attributes="0"/>
+                                          <Component id="jTextField176" min="-2" pref="107" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4221,40 +4232,37 @@
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                           <Component id="jLabel140" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField174" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField175" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField176" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField159" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField160" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField161" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel141" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField177" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField162" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                           <Component id="jLabel142" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField178" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField179" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel194" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField180" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField174" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField175" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel184" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField176" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel191" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel192" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel170" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel171" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                           <Component id="jLabel137" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextField134" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel139" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField159" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField158" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jDateChooser5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel193" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jSpinField8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel172" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deH4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deH5" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4280,7 +4288,7 @@
                             <Property name="text" type="java.lang.String" value="Tel&#xe9;fonos"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField159">
+                        <Component class="javax.swing.JTextField" name="jTextField158">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4295,28 +4303,28 @@
                             <Property name="text" type="java.lang.String" value="Cliente"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField174">
+                        <Component class="javax.swing.JTextField" name="jTextField159">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="123456"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField175">
+                        <Component class="javax.swing.JTextField" name="jTextField160">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="02"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField176">
+                        <Component class="javax.swing.JTextField" name="jTextField161">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="Camilo Andr&#xe9;s Sanabria S"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField176ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField161ActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel141">
@@ -4324,14 +4332,14 @@
                             <Property name="text" type="java.lang.String" value="Id Cliente"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField177">
+                        <Component class="javax.swing.JTextField" name="jTextField162">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="1234"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField178">
+                        <Component class="javax.swing.JTextField" name="jTextField174">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -4343,14 +4351,14 @@
                             <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField179">
+                        <Component class="javax.swing.JTextField" name="jTextField175">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="text" type="java.lang.String" value="20"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel191">
+                        <Component class="javax.swing.JLabel" name="jLabel170">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
@@ -4358,7 +4366,7 @@
                             <Property name="text" type="java.lang.String" value="Fecha Entrega"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel192">
+                        <Component class="javax.swing.JLabel" name="jLabel171">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
@@ -4366,7 +4374,7 @@
                             <Property name="text" type="java.lang.String" value="Horario Entrega"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel193">
+                        <Component class="javax.swing.JLabel" name="jLabel172">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
@@ -4374,12 +4382,12 @@
                             <Property name="text" type="java.lang.String" value="A"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel194">
+                        <Component class="javax.swing.JLabel" name="jLabel184">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField180">
+                        <Component class="javax.swing.JTextField" name="jTextField176">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="horizontalAlignment" type="int" value="0"/>
@@ -4388,13 +4396,29 @@
                         </Component>
                         <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser5">
                         </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField5">
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="deH4">
+                          <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                                <TitledBorder/>
+                              </Border>
+                            </Property>
+                            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                            <Property name="showIcon" type="boolean" value="true"/>
+                            <Property name="showSeconds" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField6">
-                        </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField7">
-                        </Component>
-                        <Component class="com.toedter.components.JSpinField" name="jSpinField8">
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="deH5">
+                          <Properties>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                                <TitledBorder/>
+                              </Border>
+                            </Property>
+                            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                            <Property name="showIcon" type="boolean" value="true"/>
+                            <Property name="showSeconds" type="boolean" value="false"/>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -4967,6 +4991,9 @@
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane29">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Gesti&#xf3;n Por Indicadores">
@@ -5568,6 +5595,9 @@
                     </Container>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane35">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Pedidos Por Categor&#xed;a">
@@ -5606,6 +5636,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane36">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Gesti&#xf3;n Por Indicadores">
@@ -5855,6 +5888,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane38">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Gesti&#xf3;n Por Hora">
@@ -6562,6 +6598,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane39">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Informe Guacamaya">
@@ -6600,6 +6639,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane40">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Informe Televendeor">
@@ -7201,6 +7243,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane27">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Campa&#xf1;as D&#xed;a Siguiente">
@@ -7239,6 +7284,9 @@
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane28">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Campa&#xf1;as D&#xed;a Siguiente">
@@ -7674,6 +7722,9 @@
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane33">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f5" green="f5" red="f5" type="rgb"/>
+                        </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                             <TitledBorder title="Pedidos Virtuales">

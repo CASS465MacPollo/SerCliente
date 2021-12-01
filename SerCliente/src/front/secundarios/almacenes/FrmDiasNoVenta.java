@@ -187,6 +187,7 @@ public class FrmDiasNoVenta extends javax.swing.JDialog {
         jButton113.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton113.setText("Borrar");
 
+        jScrollPane18.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Call Center Días No Laborables", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable12.setModel(new javax.swing.table.DefaultTableModel(

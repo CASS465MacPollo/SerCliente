@@ -184,6 +184,7 @@ public class FrmPedidosTransmitidos extends javax.swing.JDialog {
                 .addGap(27, 27, 27))
         );
 
+        jScrollPane2.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pedidos Transmitidos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(

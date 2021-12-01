@@ -202,6 +202,7 @@ public class FrmConsultaEmpleados extends javax.swing.JDialog {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        jScrollPane3.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(

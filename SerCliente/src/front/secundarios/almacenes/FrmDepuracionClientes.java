@@ -109,6 +109,7 @@ public class FrmDepuracionClientes extends javax.swing.JDialog {
         jButton27.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton27.setText("Activar");
 
+        jScrollPane16.setBackground(new java.awt.Color(245, 245, 245));
         jScrollPane16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 14))); // NOI18N
 
         jTable10.setModel(new javax.swing.table.DefaultTableModel(
